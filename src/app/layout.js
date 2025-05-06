@@ -2,7 +2,7 @@ import { Mona_Sans, Geist_Mono } from "next/font/google";
 import "./globals.css";
 // import components
 import NavigationBar from "@/components/navigationBar/NavigationBar";
-import Footer from "@/components/footer/Footer";
+// import Footer from "@/components/footer/Footer";
 
 const monaSans = Mona_Sans({
   variable: "--font-mona-sans",
@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
       >
         <NavigationBar />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

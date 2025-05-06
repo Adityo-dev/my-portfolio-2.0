@@ -10,7 +10,7 @@ const navBarData = [
 ];
 function NavigationBar() {
   return (
-    <nav className="container mx-auto absolute top-0 left-0 right-0 px-6 flex justify-between items-center py-4">
+    <nav className="container mx-auto px-6 flex justify-between items-center py-4">
       <Link href={"/"} className="text-lg uppercase">
         Aditto dev
       </Link>
