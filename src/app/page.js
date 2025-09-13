@@ -7,7 +7,7 @@ import Services from "@/components/home/services/Services";
 
 export default function Home() {
   return (
-    <div>
+    <div className="space-y-16">
       <Hero />
       <AboutMe />
       <FeatureWork />
