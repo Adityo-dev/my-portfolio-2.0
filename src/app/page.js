@@ -1,5 +1,6 @@
 // import components
 import AboutMe from "@/components/home/aboutMe/AboutMe";
+import ContactSection from "@/components/home/contact/Contact";
 import FeatureWork from "@/components/home/featureWork/FeatureWork";
 import Hero from "@/components/home/hero/Hero";
 import LatestArticle from "@/components/home/latestArticle/LatestArticle";
@@ -12,6 +13,7 @@ export default function Home() {
       <AboutMe />
       <FeatureWork />
       <Services />
+      <ContactSection />
       <LatestArticle />
     </div>
   );

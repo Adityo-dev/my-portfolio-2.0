@@ -1,6 +1,6 @@
 "use client";
-import Image from "next/image";
 import { useState } from "react";
+import ProjectCard from "./ProjectCard";
 
 function FeatureWork() {
   const [activeTab, setActiveTab] = useState("all");
@@ -12,13 +12,23 @@ function FeatureWork() {
       desc: "A modern e-commerce platform built with React.js and Tailwind.",
       img: "/images/image1.avif",
       type: "react",
+      technologies: ["React", "Tailwind CSS", "Node.js", "MongoDB"],
+      liveUrl: "https://example.com",
+      githubUrl: "https://github.com/example",
+      completionDate: "Jan 2024",
+      status: "Completed",
     },
     {
       id: 2,
       title: "Next.js Portfolio",
       desc: "A personal portfolio website created using Next.js 14.",
-      img: "/images/image1.avif",
+      img: "/images/image2.avif",
       type: "next",
+      technologies: ["Next.js 14", "TypeScript", "Framer Motion"],
+      liveUrl: "https://portfolio.example.com",
+      githubUrl: "https://github.com/example/portfolio",
+      completionDate: "Dec 2023",
+      status: "Live",
     },
     {
       id: 3,
@@ -26,13 +36,23 @@ function FeatureWork() {
       desc: "Interactive dashboard with charts and authentication.",
       img: "/images/image1.avif",
       type: "react",
+      technologies: ["React", "Chart.js", "Firebase Auth", "Redux"],
+      liveUrl: "https://dashboard.example.com",
+      githubUrl: "https://github.com/example/dashboard",
+      completionDate: "Feb 2024",
+      status: "In Progress",
     },
     {
       id: 4,
       title: "Next.js Blog Platform",
       desc: "SEO-friendly blog application powered by Next.js.",
-      img: "/images/image1.avif",
+      img: "/images/image3.avif",
       type: "next",
+      technologies: ["Next.js", "MDX", "Vercel", "Prisma"],
+      liveUrl: "https://blog.example.com",
+      githubUrl: "https://github.com/example/blog",
+      completionDate: "Mar 2024",
+      status: "Live",
     },
   ];
 
@@ -43,7 +63,7 @@ function FeatureWork() {
       : projects.filter((p) => p.type === activeTab);
 
   return (
-    <section id="work" className="container mx-auto px-6 py-20">
+    <section className="container mx-auto px-6 py-20">
       {/* Section Header */}
       <div className="w-full md:w-1/2 flex flex-col items-start">
         <div>
@@ -53,7 +73,7 @@ function FeatureWork() {
             <span className="text-sunsetOrange">{"}"}</span>
           </p>
           <h2 className="text-5xl uppercase">Latest Insights</h2>
-          <p className="mt-4 text-gray-300">
+          <p className="mt-4 leading-relaxed text-gray-300">
             Explore my latest projects showcasing creativity, performance, and
             user-focused solutions.
           </p>
@@ -61,33 +81,33 @@ function FeatureWork() {
       </div>
 
       {/* Tabs */}
-      <div className="flex gap-6 mt-10">
+      <div className="flex gap-4 mt-6 flex-wrap">
         <button
           onClick={() => setActiveTab("all")}
-          className={`px-4 py-2 rounded-lg font-semibold transition ${
+          className={`px-4 py-2 rounded-md font-semibold transition border border-sunsetOrange ${
             activeTab === "all"
-              ? "bg-orange-500 text-black"
-              : "border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-black"
+              ? "bg-sunsetOrange text-white"
+              : "text-sunsetOrange hover:bg-sunsetOrange/10"
           }`}
         >
           All Projects
         </button>
         <button
           onClick={() => setActiveTab("react")}
-          className={`px-4 py-2 rounded-lg font-semibold transition ${
+          className={`px-4 py-2 rounded-md font-semibold transition border border-sunsetOrange ${
             activeTab === "react"
-              ? "bg-orange-500 text-black"
-              : "border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-black"
+              ? "bg-sunsetOrange text-white"
+              : "text-sunsetOrange hover:bg-sunsetOrange/10"
           }`}
         >
           React.js
         </button>
         <button
           onClick={() => setActiveTab("next")}
-          className={`px-4 py-2 rounded-lg font-semibold transition ${
+          className={`px-4 py-2 rounded-md font-semibold transition border border-sunsetOrange ${
             activeTab === "next"
-              ? "bg-orange-500 text-black"
-              : "border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-black"
+              ? "bg-sunsetOrange text-white"
+              : "text-sunsetOrange hover:bg-sunsetOrange/10"
           }`}
         >
           Next.js
@@ -95,32 +115,20 @@ function FeatureWork() {
       </div>
 
       {/* Project Cards */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+      <div className="grid sm:grid-cols-1 lg:grid-cols-3 gap-8 mt-10">
         {filteredProjects.map((project) => (
-          <div
-            key={project.id}
-            className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition"
-          >
-            <Image
-              src={project.img}
-              alt={project.title}
-              width={400}
-              height={300}
-              className="w-full h-60 object-cover"
-            />
-            <div className="p-6">
-              <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
-              <p className="text-gray-400 mb-4">{project.desc}</p>
-              <a
-                href="#"
-                className="text-orange-500 font-semibold hover:underline"
-              >
-                View Project →
-              </a>
-            </div>
-          </div>
+          <ProjectCard project={project} key={project?.id} />
         ))}
       </div>
+
+      {/* No Projects Message */}
+      {filteredProjects.length === 0 && (
+        <div className="text-center py-12">
+          <p className="text-gray-400 text-lg">
+            No projects found in this category.
+          </p>
+        </div>
+      )}
     </section>
   );
 }

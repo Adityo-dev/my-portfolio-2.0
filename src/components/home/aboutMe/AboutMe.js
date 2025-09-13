@@ -13,7 +13,7 @@ function AboutMe() {
           </p>
 
           <h2 className="text-5xl uppercase">WHO I am</h2>
-          <p className="mt-4">
+          <p className="mt-4 leading-relaxed">
             I’m Aditya Deb Barmon Koushik, a passionate Frontend Developer with
             expertise in React.js, Next.js, and modern UI frameworks. I love
             transforming creative ideas into user-friendly, responsive, and
@@ -21,31 +21,27 @@ function AboutMe() {
           </p>
 
           {/* Education Section */}
-          <div className="mb-8 mt-6">
-            <h3 className="text-2xl font-semibold text-white mb-4">
-              Education
-            </h3>
+          <div className="my-6">
+            <h3 className="text-xl font-semibold text-white mb-4">Education</h3>
             <ul className="space-y-3 text-gray-300">
               <li>
                 🎓{" "}
                 <span className="font-semibold">
                   Diploma in Computer Science & Technology
-                </span>
-                – Kushtia Polytechnic Institute
-              </li>
-              <li>
-                📘{" "}
-                <span className="font-semibold">
-                  Higher Secondary Certificate (HSC)
-                </span>
-                – [Your College Name]
+                </span>{" "}
+                – Kushtia Polytechnic Institute (KPI) (2021–2026)
               </li>
               <li>
                 📗{" "}
                 <span className="font-semibold">
                   Secondary School Certificate (SSC)
-                </span>
-                – [Your School Name]
+                </span>{" "}
+                – Chatmohar Govt. RCN and BSN Model Pilot High School
+                (2016–2021)
+              </li>
+              <li>
+                📘 <span className="font-semibold">Primary Education</span> –
+                Chatmohar Model Govt. Primary School (2010–2015)
               </li>
             </ul>
           </div>

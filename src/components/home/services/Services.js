@@ -35,7 +35,7 @@ function Services() {
           </p>
 
           <h2 className="text-5xl uppercase">Service expertise</h2>
-          <p className="mt-4">
+          <p className="mt-4 leading-relaxed">
             Our mission is to elevate your vision through groundbreaking design
             combining artistic flair with strategic insight to create memorable
             eyneriences that leave a lastina imnrecsion.
