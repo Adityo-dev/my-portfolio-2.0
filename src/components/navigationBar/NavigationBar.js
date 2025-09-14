@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 // navBar data
 const navBarData = [
@@ -9,20 +11,106 @@ const navBarData = [
   { id: 4, name: "Services", link: "/services" },
   { id: 5, name: "Contact", link: "/contact" },
 ];
-function NavigationBar() {
-  return (
-    <nav className="container mx-auto px-6 flex justify-between items-center py-4">
-      <Link href={"/"} className="">
-        <Image src={"/logo/coding.png"} width={50} height={50} alt="" />
-      </Link>
 
-      <ul className="space-x-8">
-        {navBarData.map((item) => (
-          <Link key={item?.id} href={item?.link}>
-            {item?.name}
-          </Link>
-        ))}
-      </ul>
+function NavigationBar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Handle scroll event to add background to navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Close mobile menu when a link is clicked
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
+
+  return (
+    <nav
+      className={`fixed w-full top-0 left-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-[#111625] shadow-md py-2" : "bg-transparent py-4"
+      }`}
+    >
+      <div className="container mx-auto px-4 flex justify-between items-center">
+        <Link href={"/"} className="z-50">
+          <Image
+            src={"/logo/coding.png"}
+            width={50}
+            height={50}
+            alt="Website Logo"
+            className="transition-transform duration-300 hover:scale-105"
+          />
+        </Link>
+
+        {/* Desktop Navigation */}
+        <ul className="hidden md:flex space-x-6 lg:space-x-8">
+          {navBarData.map((item) => (
+            <li key={item.id} className="relative group">
+              <Link
+                href={item.link}
+                className="text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium"
+              >
+                {item.name}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden flex flex-col justify-center items-center w-10 h-10 relative z-50"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+        >
+          <span
+            className={`bg-gray-800 transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+              isOpen ? "rotate-45 translate-y-1" : "-translate-y-1"
+            }`}
+          ></span>
+          <span
+            className={`bg-gray-800 transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-1 ${
+              isOpen ? "opacity-0" : "opacity-100"
+            }`}
+          ></span>
+          <span
+            className={`bg-gray-800 transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+              isOpen ? "-rotate-45 -translate-y-1" : "translate-y-1"
+            }`}
+          ></span>
+        </button>
+
+        {/* Mobile Navigation */}
+        <div
+          className={`fixed md:hidden inset-0 bg-white z-40 transition-transform duration-300 ease-in-out ${
+            isOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <ul className="flex flex-col items-center justify-center h-full space-y-10">
+            {navBarData.map((item) => (
+              <li key={item.id}>
+                <Link
+                  href={item.link}
+                  className="text-2xl font-medium text-gray-800 hover:text-blue-600 transition-colors duration-300"
+                  onClick={handleLinkClick}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </nav>
   );
 }
