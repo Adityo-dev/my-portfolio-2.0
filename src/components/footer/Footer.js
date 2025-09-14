@@ -16,7 +16,7 @@ function Footer() {
   };
 
   return (
-    <footer className="bg-gray-950 border-t border-gray-800 mt-24">
+    <footer className="bg-gray-950 border-t border-gray-800">
       <div className="container mx-auto px-6 py-12">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">

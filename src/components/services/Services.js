@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import HeaderColSection from "../sectionHeader/HeaderColSection";
 import ServicesCard from "./ServicesCard";
 
 function Services() {
@@ -104,26 +105,18 @@ function Services() {
 
   return (
     <section id="services" className="py-20 bg-gray-950">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <p className="text-sunsetOrange text-lg mb-2">
-            <span className="text-sunsetOrange">{"{"}</span>
-            SERVICES
-            <span className="text-sunsetOrange">{"}"}</span>
-          </p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Service Expertise
-          </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            Our mission is to elevate your vision through groundbreaking design
-            combining artistic flair with strategic insight to create memorable
-            experiences that leave a lasting impression.
-          </p>
-        </div>
+        <HeaderColSection
+          sectionName={"SERVICES"}
+          title={"Service Expertise"}
+          description={
+            "Our mission is to elevate your vision through groundbreaking design combining artistic flair with strategic insight to create memorable experiences that leave a lasting impression."
+          }
+        />
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {servicesData.map((service, index) => (
             <ServicesCard
               key={index}
@@ -135,7 +128,7 @@ function Services() {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-16 text-center">
+        <div className="mt-8 text-center">
           <button className="bg-sunsetOrange text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 transition-colors duration-300 flex items-center justify-center mx-auto">
             Start a Project Together
             <svg

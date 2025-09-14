@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 
+import HeaderColSection from "../sectionHeader/HeaderColSection";
 import SkillsCard from "./SkillsCard";
 import SkillsSummary from "./SkillsSummary";
 
@@ -68,20 +69,13 @@ function Skills() {
     <section id="skills" className="py-20 bg-gray-950">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <p className="text-sunsetOrange mb-2">
-            <span className="text-sunsetOrange">{"{"} </span>
-            FRONTEND SKILLS
-            <span className="text-sunsetOrange"> {"}"}</span>
-          </p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Frontend Expertise
-          </h2>
-          <p className="text-gray-400 max-w-3xl mx-auto">
-            Technologies and frameworks I use to create engaging, responsive,
-            and high-performance web applications.
-          </p>
-        </div>
+        <HeaderColSection
+          sectionName={"FRONTEND SKILLS"}
+          title={"Frontend Expertise"}
+          description={
+            "Technologies and frameworks I use to create engaging, responsive, and high-performance web applications."
+          }
+        />
 
         {/* Skills Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

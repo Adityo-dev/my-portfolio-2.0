@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import HeaderRowSection from "../sectionHeader/HeaderRowSection";
 import ProjectCard from "./ProjectCard";
 
 function FeatureWork() {
@@ -63,22 +64,15 @@ function FeatureWork() {
       : projects.filter((p) => p.type === activeTab);
 
   return (
-    <section className="container mx-auto px-6 py-20">
+    <section className="container mx-auto px-4 py-20">
       {/* Section Header */}
-      <div className="w-full md:w-1/2 flex flex-col items-start">
-        <div>
-          <p className="space-x-2 mb-7">
-            <span className="text-sunsetOrange">{"{"}</span>
-            <span>FEATURED WORK</span>
-            <span className="text-sunsetOrange">{"}"}</span>
-          </p>
-          <h2 className="text-5xl uppercase">Latest Insights</h2>
-          <p className="mt-4 leading-relaxed text-gray-300">
-            Explore my latest projects showcasing creativity, performance, and
-            user-focused solutions.
-          </p>
-        </div>
-      </div>
+      <HeaderRowSection
+        sectionName={"FEATURED WORK"}
+        title={"Latest Insights"}
+        description={
+          "Explore my latest projects showcasing creativity, performance, and user-focused solutions."
+        }
+      />
 
       {/* Tabs */}
       <div className="flex gap-4 mt-6 flex-wrap">
@@ -115,7 +109,7 @@ function FeatureWork() {
       </div>
 
       {/* Project Cards */}
-      <div className="grid sm:grid-cols-1 lg:grid-cols-3 gap-8 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
         {filteredProjects.map((project) => (
           <ProjectCard project={project} key={project?.id} />
         ))}

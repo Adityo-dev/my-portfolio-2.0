@@ -1,5 +1,3 @@
-// desc: This is the hero section of the home page
-
 import Link from "next/link";
 
 // developer Roles data
@@ -11,11 +9,12 @@ const developerRoles = [
 
 function Hero() {
   return (
-    <section className="w-full h-screen">
-      <div className="relative z-50 container mx-auto px-6 w-full h-screen flex flex-col space-y-44 justify-center ">
-        <div className=" w-full flex items-center justify-between uppercase text-sm">
+    <section className="w-full flex flex-col justify-center py-12 md:py-24">
+      <div className="container mx-auto px-4 sm:px-6 w-full flex flex-col justify-center space-y-16 md:space-y-44">
+        {/* Roles Section - Stack on mobile, row on larger screens */}
+        <div className="w-full flex flex-wrap items-center justify-center sm:justify-between uppercase text-sm gap-4 md:gap-0">
           {developerRoles.map((role, ind) => (
-            <p key={ind} className="space-x-2">
+            <p key={ind} className="space-x-2 text-center md:text-left">
               <span className="text-sunsetOrange">{"{"}</span>
               <span>{role}</span>
               <span className="text-sunsetOrange">{"}"}</span>
@@ -23,25 +22,28 @@ function Hero() {
           ))}
         </div>
 
-        <div className="flex items-end justify-between space-x-32">
-          <h1 className="text-9xl font-bold uppercase text-defaultWhite flex flex-col tracking-tighter text-nowrap">
+        {/* Main Content - Stack on mobile, row on larger screens */}
+        <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-8 lg:gap-16 xl:gap-32">
+          {/* Headline */}
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold uppercase text-defaultWhite flex flex-col tracking-tight">
             <span>innovate</span>
-            <span className="text-sunsetOrange">for design</span>
+            <span className="text-sunsetOrange text-nowrap">for design</span>
             <span>code</span>
           </h1>
 
-          <div>
-            <p className="text-defaultWhite text-lg">
+          {/* Description and Button */}
+          <div className="w-full">
+            <p className="text-defaultWhite text-base sm:text-lg md:text-xl">
               Our mission is to elevate your vision through groundbreaking
               design combining artistic flair with strategic insight to create
-              memorable eyneriences that leave a lastina imnrecsion.
+              memorable experiences that leave a lasting impression.
             </p>
 
-            <Link href={"/"} className="flex items-center mt-20 space-x-1">
-              <button className="bg-white text-black font-semibold px-4 py-3 rounded-md text-sm uppercase">
+            <Link href={"/"} className="flex items-center mt-10 md:mt-20 gap-2">
+              <button className="bg-white text-black font-semibold px-4 py-3 rounded-md text-sm uppercase flex-1 sm:flex-none">
                 Let's Contact
               </button>
-              <button className="bg-sunsetOrange text-black font-semibold px-4 py-3 rounded-md flex items-center justify-center">
+              <button className="bg-sunsetOrange text-white font-semibold px-4 py-3 rounded-md flex items-center justify-center w-12 h-12">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -52,7 +54,7 @@ function Hero() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="lucide lucide-arrow-up-right-icon lucide-arrow-up-right text-white"
+                  className="lucide lucide-arrow-up-right"
                 >
                   <path d="M7 7h10v10" />
                   <path d="M7 17 17 7" />
@@ -63,13 +65,17 @@ function Hero() {
         </div>
       </div>
 
-      {/* <Image
-        src={"/images/heroImage.jpg"}
-        width={800}
-        height={800}
-        alt=""
-        className="absolute w-[900px] right-[10%] top-[10%]"
-      /> */}
+      {/* If you want to add the image back later, use this responsive approach:
+      <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-1/2 max-w-2xl hidden xl:block">
+        <Image
+          src={"/images/heroImage.jpg"}
+          width={800}
+          height={800}
+          alt="Hero image"
+          className="w-full h-auto"
+        />
+      </div>
+      */}
     </section>
   );
 }

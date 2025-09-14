@@ -5,7 +5,7 @@ function ProjectCard({ project }) {
   return (
     <div className="group bg-gray-900 rounded-lg overflow-hidden shadow-sm transition-all duration-300 border border-gray-800 hover:border-sunsetOrange/60">
       {/* Project Image */}
-      <div className="relative h-64 w-full overflow-hidden">
+      <div className="relative h-52 md:h-72 w-full overflow-hidden">
         <Image
           src={project?.img}
           alt={project?.title}

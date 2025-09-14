@@ -1,21 +1,19 @@
+import HeaderRowSection from "../sectionHeader/HeaderRowSection";
 import ContactFrom from "./ContactFrom";
 
 function ContactSection() {
   return (
-    <section className="container mx-auto px-6 h-full flex justify-between gap-[10%]">
-      <div className="w-1/2 flex flex-col justify-between items-start">
+    <section className="py-20 bg-gray-950">
+      <div className="container mx-auto px-4 h-full flex flex-col lg:flex-row justify-between gap-8">
         <div>
-          <p className="space-x-2 mb-7">
-            <span className="text-sunsetOrange">{"{"}</span>
-            <span>Contact</span>
-            <span className="text-sunsetOrange">{"}"}</span>
-          </p>
-
-          <h2 className="text-5xl uppercase">Get In Touch</h2>
-          <p className="mt-4 leading-relaxed">
-            Have a project in mind or just want to say hello? Fill out the form
-            and I’ll get back to you as soon as possible.
-          </p>
+          {/* Section Header */}
+          <HeaderRowSection
+            sectionName={"Contact"}
+            title={"Get In Touch"}
+            description={
+              "Have a project in mind or just want to say hello? Fill out the form and I’ll get back to you as soon as possible."
+            }
+          />
 
           <ul className="space-y-3 text-gray-300 mt-6">
             <li>
@@ -38,10 +36,10 @@ function ContactSection() {
             </li>
           </ul>
         </div>
-      </div>
 
-      <div className="w-1/2">
-        <ContactFrom />
+        <div className="lg:w-1/2">
+          <ContactFrom />
+        </div>
       </div>
     </section>
   );

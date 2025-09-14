@@ -1,7 +1,7 @@
 function ServicesCard({ item, activeService, setActiveService }) {
   return (
     <div
-      className={`bg-gray-900 p-8 rounded-xl border border-gray-800 transition-all duration-300 cursor-pointer group ${
+      className={`bg-gray-900 p-4 rounded-xl border border-gray-800 transition-all duration-300 cursor-pointer group ${
         activeService === item?.id
           ? "border-sunsetOrange/50 ring-2 ring-sunsetOrange/20"
           : "hover:border-sunsetOrange/30"
