@@ -47,7 +47,11 @@ function AboutMe() {
           </div>
 
           {/* Buttons */}
-          <Link href={"/"} className="flex items-center space-x-1">
+          <Link
+            href="/cv.pdf"
+            download="aditto-cv.pdf"
+            className="flex items-center space-x-1"
+          >
             <button className="bg-white text-black font-semibold px-4 py-3 rounded-md text-sm uppercase">
               Download CV
             </button>
