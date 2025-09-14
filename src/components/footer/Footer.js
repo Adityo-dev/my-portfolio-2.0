@@ -19,7 +19,7 @@ function Footer() {
     <footer className="bg-gray-950 border-t border-gray-800">
       <div className="container mx-auto px-6 py-12">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-4">
@@ -28,7 +28,7 @@ function Footer() {
               </div>
               <span className="text-white text-xl font-bold">Developer</span>
             </div>
-            <p className="text-gray-400 mb-6 max-w-xs">
+            <p className="text-gray-400 mb-6 w-full">
               Creating beautiful, functional web experiences with a focus on
               user satisfaction and performance.
             </p>
@@ -222,7 +222,7 @@ function Footer() {
                 <input
                   type="email"
                   placeholder="Your email address"
-                  className="px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-sunsetOrange focus:border-transparent"
+                  className="w-full px-4 py-3 rounded-md bg-gray-800 text-white outline-none border border-gray-800 focus:border-sunsetOrange transition-all duration-300"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required

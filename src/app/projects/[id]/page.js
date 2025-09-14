@@ -1,6 +1,7 @@
 "use client";
+import ProjectSinglePageHeader from "@/components/projectsSinglePage/ProjectSinglePageHeader";
+import SideBarProjectDetails from "@/components/projectsSinglePage/SideBarProjectDetails";
 import Image from "next/image";
-import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -104,6 +105,25 @@ function ProjectDetails() {
   const params = useParams();
   const [project, setProject] = useState(null);
   const [activeImage, setActiveImage] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Check if window is available (client-side)
+    if (typeof window !== "undefined") {
+      const checkIsMobile = () => {
+        setIsMobile(window.innerWidth < 768);
+      };
+
+      // Initial check
+      checkIsMobile();
+
+      // Add event listener for window resize
+      window.addEventListener("resize", checkIsMobile);
+
+      // Cleanup
+      return () => window.removeEventListener("resize", checkIsMobile);
+    }
+  }, []);
 
   useEffect(() => {
     // Simulate fetching project data based on ID
@@ -124,238 +144,85 @@ function ProjectDetails() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-950 text-white">
+    <section className="py-4 sm:py-8 lg:py-12 xl:py-16 2xl:py-20">
       {/* Header */}
-      <header className="container mx-auto px-6 py-8">
-        <Link
-          href="/"
-          className="inline-flex items-center text-sunsetOrange hover:text-orange-300 transition-colors mb-6"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 mr-2"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              fillRule="evenodd"
-              d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
-          Back to Projects
-        </Link>
+      <ProjectSinglePageHeader project={project} isMobile={isMobile} />
 
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-          <div>
-            <h1 className="text-4xl md:text-5xl font-bold">{project.title}</h1>
-            <p className="text-gray-300 mt-2">{project.desc}</p>
-          </div>
-          <div className="flex gap-3">
-            <Link
-              href={project.liveUrl}
-              target="_blank"
-              className="px-4 py-2 bg-sunsetOrange text-white rounded-md hover:bg-orange-500 transition-colors flex items-center gap-2"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              Live Demo
-            </Link>
-            <Link
-              href={project.githubUrl}
-              target="_blank"
-              className="px-4 py-2 border border-gray-700 text-gray-300 rounded-md hover:border-sunsetOrange hover:text-sunsetOrange transition-colors flex items-center gap-2"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              View Code
-            </Link>
-          </div>
-        </div>
-      </header>
-
-      <main className="container mx-auto px-6 pb-20">
-        {/* Hero Image */}
-        <div className="rounded-lg overflow-hidden mb-10 shadow-lg">
-          <div className="relative h-96 w-full">
-            <Image
-              src={project.images[activeImage]}
-              alt={project.title}
-              fill
-              className="object-cover"
-            />
-          </div>
-
-          {/* Image Thumbnails */}
-          {project.images.length > 1 && (
-            <div className="flex gap-2 p-4 bg-gray-900">
-              {project.images.map((img, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveImage(index)}
-                  className={`relative h-16 w-16 rounded overflow-hidden ${
-                    activeImage === index
-                      ? "ring-2 ring-sunsetOrange"
-                      : "opacity-70"
-                  }`}
-                >
-                  <Image
-                    src={img}
-                    alt={`${project.title} view ${index + 1}`}
-                    fill
-                    className="object-cover"
-                  />
-                </button>
-              ))}
+      <section className="container mx-auto px-3 sm:px-4 flex flex-col lg:flex-row gap-6 lg:gap-8">
+        <div className="lg:w-[70%]">
+          {/* Hero Image */}
+          <div className="rounded-lg overflow-hidden mb-6 lg:mb-8 xl:mb-10 shadow-sm">
+            <div className="relative h-[300px] xs:h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px] w-full">
+              <Image
+                src={project.images[activeImage]}
+                alt={project.title}
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
-          )}
-        </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            {/* Image Thumbnails */}
+            {project.images.length > 1 && (
+              <div className="flex gap-2 p-3 sm:p-4 bg-gray-900 rounded-md overflow-x-auto">
+                {project.images.map((img, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setActiveImage(index)}
+                    className={`relative h-16 w-16 sm:h-20 sm:w-20 flex-shrink-0 rounded overflow-hidden border-2 transition-all ${
+                      activeImage === index
+                        ? "border-sunsetOrange scale-105"
+                        : "border-gray-700 opacity-70 hover:opacity-100"
+                    }`}
+                  >
+                    <Image
+                      src={img}
+                      alt={`${project.title} view ${index + 1}`}
+                      fill
+                      className="object-cover"
+                    />
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
           {/* Main Content */}
-          <div className="lg:col-span-2">
-            <section className="mb-10">
-              <h2 className="text-2xl font-bold mb-4 text-sunsetOrange">
+          <div>
+            <section className="mb-6">
+              <h2 className="text-xl sm:text-2xl font-bold mb-3 text-sunsetOrange">
                 Project Overview
               </h2>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                 {project.longDescription}
               </p>
             </section>
 
-            <section className="mb-10">
-              <h2 className="text-2xl font-bold mb-4 text-sunsetOrange">
+            <section className="mb-6">
+              <h2 className="text-xl sm:text-2xl font-bold mb-3 text-sunsetOrange">
                 Challenges & Solutions
               </h2>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                 {project.challenges}
               </p>
             </section>
 
-            <section className="mb-10">
-              <h2 className="text-2xl font-bold mb-4 text-sunsetOrange">
+            <section className="mb-6">
+              <h2 className="text-xl sm:text-2xl font-bold mb-3 text-sunsetOrange">
                 Results
               </h2>
-              <p className="text-gray-300 leading-relaxed">{project.results}</p>
+              <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
+                {project.results}
+              </p>
             </section>
           </div>
-
-          {/* Sidebar */}
-          <div className="lg:col-span-1">
-            <div className="bg-gray-900 rounded-lg p-6 sticky top-6">
-              <h3 className="text-xl font-bold mb-4">Project Details</h3>
-
-              <div className="space-y-4">
-                <div>
-                  <p className="text-gray-400 text-sm">Status</p>
-                  <p
-                    className={`font-medium ${
-                      project.status === "Completed"
-                        ? "text-green-400"
-                        : project.status === "Live"
-                        ? "text-blue-400"
-                        : "text-yellow-400"
-                    }`}
-                  >
-                    {project.status}
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-gray-400 text-sm">Completion Date</p>
-                  <p className="font-medium">{project.completionDate}</p>
-                </div>
-
-                <div>
-                  <p className="text-gray-400 text-sm">Technologies</p>
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    {project.technologies.map((tech, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <p className="text-gray-400 text-sm">Category</p>
-                  <p className="font-medium uppercase">
-                    {project.type} Project
-                  </p>
-                </div>
-              </div>
-
-              <div className="mt-8 pt-6 border-t border-gray-800">
-                <h3 className="text-xl font-bold mb-4">Project Links</h3>
-                <div className="space-y-3">
-                  <Link
-                    href={project.liveUrl}
-                    target="_blank"
-                    className="flex items-center justify-between p-3 bg-gray-800 rounded-md hover:bg-gray-700 transition-colors group"
-                  >
-                    <span>Live Website</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 group-hover:text-sunsetOrange"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </Link>
-                  <Link
-                    href={project.githubUrl}
-                    target="_blank"
-                    className="flex items-center justify-between p-3 bg-gray-800 rounded-md hover:bg-gray-700 transition-colors group"
-                  >
-                    <span>GitHub Repository</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 group-hover:text-sunsetOrange"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </main>
-    </div>
+
+        <div className="lg:w-[30%] lg:min-w-[300px]">
+          <SideBarProjectDetails project={project} />
+        </div>
+      </section>
+    </section>
   );
 }
 

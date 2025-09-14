@@ -4,8 +4,8 @@ import HeaderRowSection from "../sectionHeader/HeaderRowSection";
 
 function AboutMe() {
   return (
-    <section className="container mx-auto px-4 py-20 h-full flex flex-col lg:flex-row justify-between gap-8">
-      <div>
+    <section className="container mx-auto px-4 py-8 sm:py-12 lg:py-24 h-full flex flex-col lg:flex-row justify-between gap-8">
+      <div className="xl:w-1/2">
         {/* Section Header */}
         <HeaderRowSection
           sectionName={"About Me"}
@@ -70,7 +70,7 @@ function AboutMe() {
       </div>
 
       {/* Right Side - Content */}
-      <div className="md:w-1/2 space-y-4 group">
+      <div className="xl:w-1/2">
         <Image
           src={`/images/image3.avif`}
           alt={`Project `}

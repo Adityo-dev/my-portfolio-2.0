@@ -66,7 +66,7 @@ function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-gray-950">
+    <section id="skills" className="py-8 sm:py-12 lg:py-24">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <HeaderColSection
