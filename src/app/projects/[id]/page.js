@@ -144,7 +144,7 @@ function ProjectDetails() {
   }
 
   return (
-    <section className="py-4 sm:py-8 lg:py-12 xl:py-16 2xl:py-20">
+    <section className="py-4 sm:py-8 lg:py-12 xl:py-16 2xl:py-20 pt-24">
       {/* Header */}
       <ProjectSinglePageHeader project={project} isMobile={isMobile} />
 

@@ -48,7 +48,7 @@ function NavigationBar() {
             width={50}
             height={50}
             alt="Website Logo"
-            className="transition-transform duration-300 hover:scale-105"
+            className="transition-transform duration-300 hover:scale-105 w-12 h-12"
           />
         </Link>
 
@@ -58,10 +58,10 @@ function NavigationBar() {
             <li key={item.id} className="relative group">
               <Link
                 href={item.link}
-                className="text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium"
+                className=" hover:text-sunsetOrange transition-colors duration-300 font-medium"
               >
                 {item.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sunsetOrange transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </li>
           ))}
@@ -74,17 +74,17 @@ function NavigationBar() {
           aria-label="Toggle menu"
         >
           <span
-            className={`bg-gray-800 transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+            className={`bg-sunsetOrange transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
               isOpen ? "rotate-45 translate-y-1" : "-translate-y-1"
             }`}
           ></span>
           <span
-            className={`bg-gray-800 transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-1 ${
+            className={`bg-sunsetOrange transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-1 ${
               isOpen ? "opacity-0" : "opacity-100"
             }`}
           ></span>
           <span
-            className={`bg-gray-800 transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+            className={`bg-sunsetOrange transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
               isOpen ? "-rotate-45 -translate-y-1" : "translate-y-1"
             }`}
           ></span>
@@ -92,16 +92,16 @@ function NavigationBar() {
 
         {/* Mobile Navigation */}
         <div
-          className={`fixed md:hidden inset-0 bg-white z-40 transition-transform duration-300 ease-in-out ${
+          className={`fixed md:hidden inset-0 bg-[#111625] z-40 transition-transform duration-300 ease-in-out ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <ul className="flex flex-col items-center justify-center h-full space-y-10">
+          <ul className="flex flex-col items-center justify-center h-full space-y-6">
             {navBarData.map((item) => (
               <li key={item.id}>
                 <Link
                   href={item.link}
-                  className="text-2xl font-medium text-gray-800 hover:text-blue-600 transition-colors duration-300"
+                  className="text-2xl font-medium hover:text-sunsetOrange transition-colors duration-300"
                   onClick={handleLinkClick}
                 >
                   {item.name}
