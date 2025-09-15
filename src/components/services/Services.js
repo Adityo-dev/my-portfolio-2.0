@@ -129,7 +129,7 @@ function Services() {
 
         {/* Call to Action */}
         <div className="mt-8 text-center">
-          <button className="bg-sunsetOrange text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 transition-colors duration-300 flex items-center justify-center mx-auto">
+          <button className="bg-sunsetOrange text-white font-semibold px-6 py-3 rounded-md hover:opacity-90  transition-colors duration-300 flex items-center justify-center mx-auto">
             Start a Project Together
             <svg
               xmlns="http://www.w3.org/2000/svg"
