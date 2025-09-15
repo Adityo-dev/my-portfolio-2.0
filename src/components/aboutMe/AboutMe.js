@@ -4,7 +4,10 @@ import HeaderRowSection from "../sectionHeader/HeaderRowSection";
 
 function AboutMe() {
   return (
-    <section className="container mx-auto px-4 py-8 sm:py-12 lg:py-24 h-full flex flex-col lg:flex-row justify-between gap-8">
+    <section
+      id="about"
+      className="container mx-auto px-4 py-8 sm:py-12 lg:py-24 h-full flex flex-col lg:flex-row justify-between gap-8"
+    >
       <div className="xl:w-1/2">
         {/* Section Header */}
         <HeaderRowSection

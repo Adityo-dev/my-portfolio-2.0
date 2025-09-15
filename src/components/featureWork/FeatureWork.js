@@ -64,7 +64,10 @@ function FeatureWork() {
       : projects.filter((p) => p.type === activeTab);
 
   return (
-    <section className="container mx-auto px-4 py-8 sm:py-12 lg:py-24">
+    <section
+      id="work"
+      className="container mx-auto px-4 py-8 sm:py-12 lg:py-24"
+    >
       {/* Section Header */}
       <HeaderRowSection
         sectionName={"FEATURED WORK"}

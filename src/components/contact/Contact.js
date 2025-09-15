@@ -3,7 +3,7 @@ import ContactFrom from "./ContactFrom";
 
 function ContactSection() {
   return (
-    <section className="py-8 sm:py-12 lg:py-24">
+    <section id="contact" className="py-8 sm:py-12 lg:py-24">
       <div className="container mx-auto px-4 h-full flex flex-col lg:flex-row justify-between gap-8">
         <div>
           {/* Section Header */}

@@ -6,10 +6,10 @@ import { useEffect, useState } from "react";
 // navBar data
 const navBarData = [
   { id: 1, name: "Home", link: "/" },
-  { id: 2, name: "About", link: "/about" },
+  { id: 2, name: "About", link: "#about" },
   { id: 3, name: "Work", link: "/#work" },
-  { id: 4, name: "Services", link: "/services" },
-  { id: 5, name: "Contact", link: "/contact" },
+  { id: 4, name: "Services", link: "#services" },
+  { id: 5, name: "Contact", link: "#contact" },
 ];
 
 function NavigationBar() {
