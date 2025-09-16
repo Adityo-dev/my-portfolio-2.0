@@ -11,7 +11,7 @@ function FeatureWork() {
       id: 1,
       title: "React E-commerce Website",
       desc: "A modern e-commerce platform built with React.js and Tailwind.",
-      img: "/images/image1.avif",
+      img: "/images/project2.png",
       type: "react",
       technologies: ["React", "Tailwind CSS", "Node.js", "MongoDB"],
       liveUrl: "https://example.com",
@@ -57,6 +57,13 @@ function FeatureWork() {
     },
   ];
 
+  //
+  const tabs = [
+    { id: "all", label: "All Projects" },
+    { id: "react", label: "React.js" },
+    { id: "next", label: "Next.js" },
+  ];
+
   // Filter projects based on activeTab
   const filteredProjects =
     activeTab === "all"
@@ -71,44 +78,27 @@ function FeatureWork() {
       {/* Section Header */}
       <HeaderRowSection
         sectionName={"FEATURED WORK"}
-        title={"Latest Insights"}
+        title={"Latest Projects"}
         description={
-          "Explore my latest projects showcasing creativity, performance, and user-focused solutions."
+          "Discover my recent work that combines creativity, functionality, and performance to deliver seamless user experiences."
         }
       />
 
       {/* Tabs */}
       <div className="flex gap-4 mt-6 flex-wrap">
-        <button
-          onClick={() => setActiveTab("all")}
-          className={`px-4 py-2 rounded-md font-semibold transition border border-sunsetOrange ${
-            activeTab === "all"
-              ? "bg-sunsetOrange text-white"
-              : "text-sunsetOrange hover:bg-sunsetOrange/10"
-          }`}
-        >
-          All Projects
-        </button>
-        <button
-          onClick={() => setActiveTab("react")}
-          className={`px-4 py-2 rounded-md font-semibold transition border border-sunsetOrange ${
-            activeTab === "react"
-              ? "bg-sunsetOrange text-white"
-              : "text-sunsetOrange hover:bg-sunsetOrange/10"
-          }`}
-        >
-          React.js
-        </button>
-        <button
-          onClick={() => setActiveTab("next")}
-          className={`px-4 py-2 rounded-md font-semibold transition border border-sunsetOrange ${
-            activeTab === "next"
-              ? "bg-sunsetOrange text-white"
-              : "text-sunsetOrange hover:bg-sunsetOrange/10"
-          }`}
-        >
-          Next.js
-        </button>
+        {tabs.map((tab) => (
+          <button
+            key={tab?.id}
+            onClick={() => setActiveTab(tab?.id)}
+            className={`px-4 py-2 rounded-md font-semibold transition border border-sunsetOrange ${
+              activeTab === tab?.id
+                ? "bg-sunsetOrange text-white"
+                : "text-sunsetOrange hover:bg-sunsetOrange/10"
+            }`}
+          >
+            {tab?.label}
+          </button>
+        ))}
       </div>
 
       {/* Project Cards */}

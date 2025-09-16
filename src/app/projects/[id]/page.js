@@ -25,9 +25,9 @@ const projectData = {
     results:
       "The platform handles over 10,000 monthly users with an average load time of 1.2 seconds. Customer satisfaction increased by 35% compared to the previous solution.",
     images: [
-      "/images/image1.avif",
-      "/images/image1.avif",
-      "/images/image1.avif",
+      "/images/project1.png",
+      "/images/image2.png",
+      "/images/project2.png",
     ],
   },
   2: {

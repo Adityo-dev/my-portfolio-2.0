@@ -39,11 +39,11 @@ function ServicesCard({ item, activeService, setActiveService }) {
       </div>
 
       <h3 className="text-2xl font-semibold mb-4 group-hover:text-sunsetOrange transition-colors duration-300">
-        {item.serviceName}
+        {item?.serviceName}
       </h3>
-      <p className="text-gray-400">{item.description}</p>
+      <p className="text-gray-400">{item?.description}</p>
 
-      <div className="mt-6 pt-6 border-t border-gray-800 flex items-center text-sm text-sunsetOrange">
+      <div className="mt-4 pt-4 border-t border-gray-800 flex items-center text-sm text-sunsetOrange">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-4 w-4 mr-1"
