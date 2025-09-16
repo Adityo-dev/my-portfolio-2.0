@@ -1,4 +1,5 @@
 "use client";
+import { allProjectsData } from "@/app/data/allProjects";
 import { useState } from "react";
 import HeaderRowSection from "../sectionHeader/HeaderRowSection";
 import ProjectCard from "./ProjectCard";
@@ -6,58 +7,6 @@ import ProjectCard from "./ProjectCard";
 function FeatureWork() {
   const [activeTab, setActiveTab] = useState("all");
 
-  const projects = [
-    {
-      id: 1,
-      title: "React E-commerce Website",
-      desc: "A modern e-commerce platform built with React.js and Tailwind.",
-      img: "/images/project2.png",
-      type: "react",
-      technologies: ["React", "Tailwind CSS", "Node.js", "MongoDB"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/example",
-      completionDate: "Jan 2024",
-      status: "Completed",
-    },
-    {
-      id: 2,
-      title: "Next.js Portfolio",
-      desc: "A personal portfolio website created using Next.js 14.",
-      img: "/images/image2.avif",
-      type: "next",
-      technologies: ["Next.js 14", "TypeScript", "Framer Motion"],
-      liveUrl: "https://portfolio.example.com",
-      githubUrl: "https://github.com/example/portfolio",
-      completionDate: "Dec 2023",
-      status: "Live",
-    },
-    {
-      id: 3,
-      title: "React Dashboard",
-      desc: "Interactive dashboard with charts and authentication.",
-      img: "/images/image1.avif",
-      type: "react",
-      technologies: ["React", "Chart.js", "Firebase Auth", "Redux"],
-      liveUrl: "https://dashboard.example.com",
-      githubUrl: "https://github.com/example/dashboard",
-      completionDate: "Feb 2024",
-      status: "In Progress",
-    },
-    {
-      id: 4,
-      title: "Next.js Blog Platform",
-      desc: "SEO-friendly blog application powered by Next.js.",
-      img: "/images/image3.avif",
-      type: "next",
-      technologies: ["Next.js", "MDX", "Vercel", "Prisma"],
-      liveUrl: "https://blog.example.com",
-      githubUrl: "https://github.com/example/blog",
-      completionDate: "Mar 2024",
-      status: "Live",
-    },
-  ];
-
-  //
   const tabs = [
     { id: "all", label: "All Projects" },
     { id: "react", label: "React.js" },
@@ -67,8 +16,8 @@ function FeatureWork() {
   // Filter projects based on activeTab
   const filteredProjects =
     activeTab === "all"
-      ? projects
-      : projects.filter((p) => p.type === activeTab);
+      ? allProjectsData
+      : allProjectsData.filter((p) => p.type === activeTab);
 
   return (
     <section

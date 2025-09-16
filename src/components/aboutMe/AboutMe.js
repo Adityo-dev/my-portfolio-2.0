@@ -1,3 +1,4 @@
+import { aboutSectionData } from "@/app/data/aboutSectionData";
 import Image from "next/image";
 import Link from "next/link";
 import HeaderRowSection from "../sectionHeader/HeaderRowSection";
@@ -11,46 +12,35 @@ function AboutMe() {
       <div className="xl:w-1/2">
         {/* Section Header */}
         <HeaderRowSection
-          sectionName={"About Me"}
-          title={"Behind the Code"}
-          description={
-            "“I’m Aditya Deb Barmon Koushik, a dedicated Frontend Developer specializing in React.js, Next.js, and modern UI frameworks. I create responsive, user-friendly, and visually engaging web experiences that bring ideas to life and make a meaningful impact. I’m also learning backend development to expand my full-stack capabilities.”"
-          }
+          sectionName={aboutSectionData?.sectionName}
+          title={aboutSectionData?.title}
+          description={aboutSectionData?.description}
         />
 
         {/* Education Section */}
         <div className="my-6">
-          <h3 className="text-xl font-semibold text-white mb-4">Education</h3>
+          <h3 className="text-xl font-semibold text-white mb-4">
+            {aboutSectionData?.educations?.title}
+          </h3>
           <ul className="space-y-3 text-gray-300">
-            <li>
-              🎓{" "}
-              <span className="font-semibold">
-                Diploma in Computer Science & Technology (Ongoing)
-              </span>{" "}
-              – Kushtia Polytechnic Institute (2021–2026)
-            </li>
-            <li>
-              📗{" "}
-              <span className="font-semibold">
-                Secondary School Certificate (SSC)
-              </span>{" "}
-              – Chatmohar Govt. RCN and BSN Model Pilot High School (2016–2021)
-            </li>
-            <li>
-              📘 <span className="font-semibold">Primary Education</span> –
-              Chatmohar Model Govt. Primary School (2010–2015)
-            </li>
+            {aboutSectionData?.educations?.education.map((education) => (
+              <li key={education?.id}>
+                {education?.icon}{" "}
+                <span className="font-semibold">{education?.title}</span> –
+                {education?.institute} ({education?.duration})
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Buttons */}
         <Link
-          href="/cv.pdf"
+          href={"/cv.pdf"}
           download="aditto-cv.pdf"
           className="flex items-center space-x-1"
         >
           <button className="bg-white text-black font-semibold px-4 py-3 rounded-md text-sm uppercase">
-            Download CV
+            {aboutSectionData?.ctaBtn?.name}
           </button>
           <button className="bg-sunsetOrange text-black font-semibold px-4 py-3 rounded-md flex items-center justify-center">
             <svg
@@ -75,8 +65,8 @@ function AboutMe() {
       {/* Right Side - Content */}
       <div className="xl:w-1/2">
         <Image
-          src={`/images/image3.avif`}
-          alt={`Project `}
+          src={aboutSectionData?.image?.url}
+          alt={aboutSectionData?.image?.alt}
           width={400}
           height={400}
           className="w-full h-full object-cover"

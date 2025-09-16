@@ -1,11 +1,5 @@
+import { heroSectionData } from "@/app/data/heroSectionData";
 import Link from "next/link";
-
-// developer Roles data
-const developerRoles = [
-  "Front end Developer",
-  "React Js Developer",
-  "Next Js Developer",
-];
 
 function Hero() {
   return (
@@ -13,7 +7,7 @@ function Hero() {
       <div className="container mx-auto px-4 sm:px-6 w-full flex flex-col justify-center space-y-16 md:space-y-44">
         {/* Roles Section - Stack on mobile, row on larger screens */}
         <div className="w-full flex flex-wrap items-center justify-center sm:justify-between uppercase text-sm gap-4 md:gap-0">
-          {developerRoles.map((role, ind) => (
+          {heroSectionData?.developerRoles.map((role, ind) => (
             <p key={ind} className="space-x-2 text-center md:text-left">
               <span className="text-sunsetOrange">{"{"}</span>
               <span>{role}</span>
@@ -34,18 +28,15 @@ function Hero() {
           {/* Description and Button */}
           <div className="w-full">
             <p className="text-defaultWhite text-base sm:text-lg xl:text-xl">
-              “I craft modern, user-friendly, and high-performance web
-              applications by blending creativity with cutting-edge technology.
-              My focus is on building seamless digital experiences that help
-              brands grow and leave a lasting impact.”
+              {heroSectionData?.description}
             </p>
 
             <Link
-              href={"#contact"}
+              href={heroSectionData?.ctaBtn?.url}
               className="flex items-center mt-10 md:mt-20 gap-2"
             >
               <button className="bg-white text-black font-semibold px-4 py-3 rounded-md text-sm uppercase flex-1 sm:flex-none">
-                Let’s Connect
+                {heroSectionData?.ctaBtn?.name}
               </button>
               <button className="bg-sunsetOrange text-white font-semibold px-4 py-3 rounded-md flex items-center justify-center w-12 h-12">
                 <svg

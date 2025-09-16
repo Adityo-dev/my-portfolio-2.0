@@ -1,24 +1,7 @@
+import { contactSectionData } from "@/app/data/contactSectionData";
 import Link from "next/link";
 import HeaderRowSection from "../sectionHeader/HeaderRowSection";
 import ContactFrom from "./ContactFrom";
-
-const contactInfo = [
-  {
-    id: 1,
-    icon: "📧",
-    label: "Email",
-    value: "adittodev01770@gmail.com",
-    link: "mailto:adittodev01770@gmail.com",
-  },
-  {
-    id: 2,
-    icon: "📞",
-    label: "Phone",
-    value: "+880 1770-365981",
-    link: "tel:+8801770365981",
-  },
-  { id: 3, icon: "📍", label: "Location", value: "Dhaka, Bangladesh" },
-];
 
 function ContactSection() {
   return (
@@ -27,16 +10,15 @@ function ContactSection() {
         <div>
           {/* Section Header */}
           <HeaderRowSection
-            sectionName={"Contact"}
-            title={"Get In Touch"}
-            description={
-              "Have a project, idea, or collaboration in mind? Reach out and I'll respond promptly to bring your vision to life."
-            }
+            sectionName={contactSectionData?.sectionName}
+            title={contactSectionData?.title}
+            description={contactSectionData?.description}
           />
 
+          {/* Contacts Info */}
           <ul className="space-y-3 text-gray-300 mt-6">
-            {contactInfo.map((info) => (
-              <li key={info?.label}>
+            {contactSectionData?.contactInfo.map((info) => (
+              <li key={info?.id}>
                 {info?.icon}{" "}
                 {info?.link ? (
                   <Link href={info?.link} className="ml-1 hover:underline">
@@ -50,6 +32,7 @@ function ContactSection() {
           </ul>
         </div>
 
+        {/* Contact From */}
         <div className="xl:w-1/2">
           <ContactFrom />
         </div>
