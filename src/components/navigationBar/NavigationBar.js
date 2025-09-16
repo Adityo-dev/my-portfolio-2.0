@@ -1,16 +1,8 @@
 "use client";
+import { navigationSEctionData } from "@/app/data/navigationSEctionData";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-
-// navBar data
-const navBarData = [
-  { id: 1, name: "Home", link: "/" },
-  { id: 2, name: "About", link: "#about" },
-  { id: 3, name: "projects", link: "/#projects" },
-  { id: 4, name: "Services", link: "#services" },
-  { id: 5, name: "Contact", link: "#contact" },
-];
 
 function NavigationBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,23 +36,23 @@ function NavigationBar() {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href={"/"} className="z-50">
           <Image
-            src={"/logo/coding.png"}
+            src={navigationSEctionData?.logo?.url}
             width={50}
             height={50}
-            alt="Website Logo"
+            alt={navigationSEctionData?.logo?.alt}
             className="transition-transform duration-300 hover:scale-105 w-12 h-12"
           />
         </Link>
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-6 lg:space-x-8">
-          {navBarData.map((item) => (
-            <li key={item.id} className="relative group capitalize">
+          {navigationSEctionData?.navList.map((item) => (
+            <li key={item?.id} className="relative group capitalize">
               <Link
-                href={item.link}
+                href={item?.link}
                 className=" hover:text-sunsetOrange transition-colors duration-300 font-medium"
               >
-                {item.name}
+                {item?.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sunsetOrange transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </li>
@@ -97,7 +89,7 @@ function NavigationBar() {
           }`}
         >
           <ul className="flex flex-col items-center justify-center h-full space-y-6">
-            {navBarData.map((item) => (
+            {navigationSEctionData?.navList.map((item) => (
               <li key={item?.id}>
                 <Link
                   href={item?.link}
