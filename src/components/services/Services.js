@@ -11,95 +11,43 @@ function Services() {
       id: 1,
       serviceName: "UI/UX Design",
       description:
-        "Creating intuitive interfaces with exceptional user experiences that drive engagement and satisfaction.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-8 w-8"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
-          />
-        </svg>
-      ),
+        "Designing intuitive, visually engaging interfaces that provide seamless and enjoyable user experiences across all devices.",
+      icon: "🎨",
     },
     {
       id: 2,
       serviceName: "Branding",
       description:
-        "Developing memorable brand identities that communicate your unique value proposition and resonate with your audience.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-8 w-8"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"
-          />
-        </svg>
-      ),
+        "Crafting memorable and cohesive brand identities that clearly communicate your value and connect with your audience.",
+      icon: "🖌️",
     },
     {
       id: 3,
       serviceName: "Web Development",
       description:
-        "Building responsive, high-performance web applications with modern technologies and best practices.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-8 w-8"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-          />
-        </svg>
-      ),
+        "Building responsive, high-performance web applications using modern technologies and best coding practices for seamless user experiences.",
+      icon: "💻",
     },
     {
       id: 4,
       serviceName: "Motion Design",
       description:
-        "Adding dynamic animations and interactions to enhance user engagement and bring interfaces to life.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-8 w-8"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      ),
+        "Enhancing digital experiences with dynamic animations and interactions that engage users and bring interfaces to life.",
+      icon: "🎬",
+    },
+    {
+      id: 5,
+      serviceName: "Performance Optimization",
+      description:
+        "Ensuring fast, reliable, and seamless digital experiences through efficient coding, optimization, and best practices.",
+      icon: "⚡",
+    },
+    {
+      id: 6,
+      serviceName: "Full-Stack Support",
+      description:
+        "Bridging frontend and backend to deliver fully functional, scalable, and maintainable web applications.",
+      icon: "🛠️",
     },
   ];
 
@@ -111,7 +59,7 @@ function Services() {
           sectionName={"SERVICES"}
           title={"Service Expertise"}
           description={
-            "Our mission is to elevate your vision through groundbreaking design combining artistic flair with strategic insight to create memorable experiences that leave a lasting impression."
+            "“I craft high-quality digital solutions by combining creativity, technical expertise, and strategic thinking to deliver engaging, intuitive, and impactful experiences.”"
           }
         />
 

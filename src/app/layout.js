@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
         className={`${monaSans.variable} ${geistMono.variable} antialiased`}
       >
         <NavigationBar />
-        {children}
+        <main className="pt-24 md:pt-20">{children}</main>
         <Footer />
       </body>
     </html>

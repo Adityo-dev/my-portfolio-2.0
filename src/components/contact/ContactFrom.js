@@ -18,7 +18,7 @@ function ContactFrom() {
         <input
           type="text"
           name="name"
-          placeholder="Your Name"
+          placeholder="Your Full Name"
           value={form.name}
           onChange={handleChange}
           className="w-full px-4 py-3 rounded-md bg-gray-800 text-white outline-none border border-gray-800 focus:border-sunsetOrange transition-all duration-300"
@@ -27,7 +27,7 @@ function ContactFrom() {
         <input
           type="email"
           name="email"
-          placeholder="Your Email"
+          placeholder="Your Email Address"
           value={form.email}
           onChange={handleChange}
           className="w-full px-4 py-3 rounded-md bg-gray-800 text-white outline-none border border-gray-800 focus:border-sunsetOrange transition-all duration-300"
@@ -35,7 +35,7 @@ function ContactFrom() {
         />
         <textarea
           name="message"
-          placeholder="Your Message"
+          placeholder="How can I help you or your project?"
           rows="5"
           value={form.message}
           onChange={handleChange}

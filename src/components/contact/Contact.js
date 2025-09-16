@@ -1,5 +1,24 @@
+import Link from "next/link";
 import HeaderRowSection from "../sectionHeader/HeaderRowSection";
 import ContactFrom from "./ContactFrom";
+
+const contactInfo = [
+  {
+    id: 1,
+    icon: "📧",
+    label: "Email",
+    value: "adittodev01770@gmail.com",
+    link: "mailto:adittodev01770@gmail.com",
+  },
+  {
+    id: 2,
+    icon: "📞",
+    label: "Phone",
+    value: "+880 1770-365981",
+    link: "tel:+8801770365981",
+  },
+  { id: 3, icon: "📍", label: "Location", value: "Dhaka, Bangladesh" },
+];
 
 function ContactSection() {
   return (
@@ -11,29 +30,23 @@ function ContactSection() {
             sectionName={"Contact"}
             title={"Get In Touch"}
             description={
-              "Have a project in mind or just want to say hello? Fill out the form and I’ll get back to you as soon as possible."
+              "Have a project, idea, or collaboration in mind? Reach out and I'll respond promptly to bring your vision to life."
             }
           />
 
           <ul className="space-y-3 text-gray-300 mt-6">
-            <li>
-              📧{" "}
-              <a
-                href="mailto:adittodev01770@gmail.com"
-                className="ml-1 hover:underline"
-              >
-                adittodev01770@gmail.com
-              </a>
-            </li>
-            <li>
-              📞{" "}
-              <a href="tel:+8801770365981" className="ml-1 hover:underline">
-                +880 1770-365981
-              </a>
-            </li>
-            <li>
-              📍 <span className="ml-1">Dhaka, Bangladesh</span>
-            </li>
+            {contactInfo.map((info) => (
+              <li key={info?.label}>
+                {info?.icon}{" "}
+                {info?.link ? (
+                  <Link href={info?.link} className="ml-1 hover:underline">
+                    {info?.value}
+                  </Link>
+                ) : (
+                  <span className="ml-1">{info?.value}</span>
+                )}
+              </li>
+            ))}
           </ul>
         </div>
 

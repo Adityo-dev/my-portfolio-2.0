@@ -34,14 +34,18 @@ function Hero() {
           {/* Description and Button */}
           <div className="w-full">
             <p className="text-defaultWhite text-base sm:text-lg xl:text-xl">
-              Our mission is to elevate your vision through groundbreaking
-              design combining artistic flair with strategic insight to create
-              memorable experiences that leave a lasting impression.
+              “I craft modern, user-friendly, and high-performance web
+              applications by blending creativity with cutting-edge technology.
+              My focus is on building seamless digital experiences that help
+              brands grow and leave a lasting impact.”
             </p>
 
-            <Link href={"/"} className="flex items-center mt-10 md:mt-20 gap-2">
+            <Link
+              href={"#contact"}
+              className="flex items-center mt-10 md:mt-20 gap-2"
+            >
               <button className="bg-white text-black font-semibold px-4 py-3 rounded-md text-sm uppercase flex-1 sm:flex-none">
-                Let's Contact
+                Let’s Connect
               </button>
               <button className="bg-sunsetOrange text-white font-semibold px-4 py-3 rounded-md flex items-center justify-center w-12 h-12">
                 <svg

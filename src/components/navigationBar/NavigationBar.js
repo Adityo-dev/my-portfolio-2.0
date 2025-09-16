@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 const navBarData = [
   { id: 1, name: "Home", link: "/" },
   { id: 2, name: "About", link: "#about" },
-  { id: 3, name: "Work", link: "/#work" },
+  { id: 3, name: "projects", link: "/#projects" },
   { id: 4, name: "Services", link: "#services" },
   { id: 5, name: "Contact", link: "#contact" },
 ];
@@ -38,7 +38,7 @@ function NavigationBar() {
   return (
     <nav
       className={`fixed w-full top-0 left-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-[#111625] shadow-md py-2" : "bg-transparent py-4"
+        isScrolled ? "bg-[#111625] shadow-md py-2.5" : "bg-transparent py-4"
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -55,7 +55,7 @@ function NavigationBar() {
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-6 lg:space-x-8">
           {navBarData.map((item) => (
-            <li key={item.id} className="relative group">
+            <li key={item.id} className="relative group capitalize">
               <Link
                 href={item.link}
                 className=" hover:text-sunsetOrange transition-colors duration-300 font-medium"
@@ -98,13 +98,13 @@ function NavigationBar() {
         >
           <ul className="flex flex-col items-center justify-center h-full space-y-6">
             {navBarData.map((item) => (
-              <li key={item.id}>
+              <li key={item?.id}>
                 <Link
-                  href={item.link}
-                  className="text-2xl font-medium hover:text-sunsetOrange transition-colors duration-300"
+                  href={item?.link}
+                  className="capitalize text-2xl font-medium hover:text-sunsetOrange transition-colors duration-300"
                   onClick={handleLinkClick}
                 >
-                  {item.name}
+                  {item?.name}
                 </Link>
               </li>
             ))}

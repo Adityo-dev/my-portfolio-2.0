@@ -12,9 +12,9 @@ function AboutMe() {
         {/* Section Header */}
         <HeaderRowSection
           sectionName={"About Me"}
-          title={"WHO I am"}
+          title={"Behind the Code"}
           description={
-            "I’m Aditya Deb Barmon Koushik, a passionate Frontend Developer with expertise in React.js, Next.js, and modern UI frameworks. I love transforming creative ideas into user-friendly, responsive, and aesthetic web experiences."
+            "“I’m Aditya Deb Barmon Koushik, a dedicated Frontend Developer specializing in React.js, Next.js, and modern UI frameworks. I create responsive, user-friendly, and visually engaging web experiences that bring ideas to life and make a meaningful impact. I’m also learning backend development to expand my full-stack capabilities.”"
           }
         />
 
@@ -25,9 +25,9 @@ function AboutMe() {
             <li>
               🎓{" "}
               <span className="font-semibold">
-                Diploma in Computer Science & Technology
+                Diploma in Computer Science & Technology (Ongoing)
               </span>{" "}
-              – Kushtia Polytechnic Institute (KPI) (2021–2026)
+              – Kushtia Polytechnic Institute (2021–2026)
             </li>
             <li>
               📗{" "}

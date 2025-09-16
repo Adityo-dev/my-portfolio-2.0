@@ -65,7 +65,7 @@ function FeatureWork() {
 
   return (
     <section
-      id="work"
+      id="projects"
       className="container mx-auto px-4 py-8 sm:py-12 lg:py-24"
     >
       {/* Section Header */}

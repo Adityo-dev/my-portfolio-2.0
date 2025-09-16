@@ -14,7 +14,7 @@ function Skills() {
       name: "HTML/CSS",
       level: 95,
       description:
-        "Semantic HTML, CSS Grid, Flexbox, animations, and responsive design principles.",
+        "Crafting semantic, accessible, and responsive layouts using HTML5 and modern CSS techniques including Flexbox and Grid.",
       projects: "40+ projects",
       icon: "🎨",
     },
@@ -23,7 +23,7 @@ function Skills() {
       name: "Tailwind CSS",
       level: 90,
       description:
-        "Utility-first CSS framework for rapidly building custom designs without writing CSS.",
+        "Building fast, custom, and mobile-friendly UI designs with utility-first Tailwind CSS framework.",
       projects: "20+ projects",
       icon: "💨",
     },
@@ -32,7 +32,7 @@ function Skills() {
       name: "JavaScript",
       level: 95,
       description:
-        "ES6+ features, asynchronous programming, DOM manipulation, and modern JS patterns.",
+        "Writing clean, modular, and modern JavaScript (ES6+) with DOM manipulation, asynchronous programming, and event-driven patterns.",
       projects: "30+ projects",
       icon: "📜",
     },
@@ -41,7 +41,7 @@ function Skills() {
       name: "React",
       level: 90,
       description:
-        "Building dynamic user interfaces with hooks, context API, and modern React patterns.",
+        "Developing dynamic, component-based user interfaces using React with Hooks, Context API, and modern best practices.",
       projects: "15+ projects",
       icon: "⚛️",
     },
@@ -50,7 +50,7 @@ function Skills() {
       name: "Next.js",
       level: 85,
       description:
-        "Server-side rendering, static site generation, and full-stack applications with API routes.",
+        "Implementing server-side rendering, static site generation, and API routes to build performant React-based applications.",
       projects: "10+ projects",
       icon: "▲",
     },
@@ -59,7 +59,7 @@ function Skills() {
       name: "TypeScript",
       level: 80,
       description:
-        "Type-safe development, interfaces, generics, and gradual adoption in existing projects.",
+        "Ensuring type safety and maintainable code through TypeScript with interfaces, generics, and gradual adoption in projects.",
       projects: "8+ projects",
       icon: "🔷",
     },
