@@ -5,7 +5,10 @@ function ProjectCard({ project }) {
   return (
     <div className="group bg-gray-900 rounded-lg overflow-hidden shadow-sm transition-all duration-300 border border-gray-800 hover:border-sunsetOrange/60 flex flex-col h-full">
       {/* Project Image */}
-      <div className="relative h-52 md:h-72 w-full overflow-hidden">
+      <Link
+        href={`/projects/${project?.id}`}
+        className="relative h-52 md:h-72 w-full overflow-hidden"
+      >
         <Image
           src={project?.img}
           alt={project?.title}
@@ -28,7 +31,7 @@ function ProjectCard({ project }) {
             {project?.status}
           </span>
         </div>
-      </div>
+      </Link>
 
       {/* Project Content */}
       <div className="p-4 flex-1 flex flex-col">
