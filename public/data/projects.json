@@ -14,6 +14,10 @@
     "challenges": "Ensuring high performance while maintaining visually rich game previews was challenging. Managing image optimization and responsive layouts across multiple device sizes required careful configuration of Next.js image components and lazy loading techniques.",
     "results": "The final product delivers a highly responsive and user-friendly experience with an average page load time under 1 second. The modern design and smooth UI have helped increase user engagement and overall site retention.",
     "images": [
+      "https://i.ibb.co/0Vz5D4Kn/image1-5.png",
+      "https://i.ibb.co/S7N8gVWX/image1-4.png",
+      "https://i.ibb.co/dsgbm3B3/image1-2.png",
+      "https://i.ibb.co/jvn3LjNS/image1-1.png",
       "https://i.ibb.co/gBpPshp/screencapture-xstore-jet-vercel-app-2025-11-06-18-13-57.png",
       "https://i.ibb.co/dJky5zY0/screencapture-xstore-jet-vercel-app-about-us-2025-11-06-18-14-11.png",
       "https://i.ibb.co/Fb6Shbst/screencapture-xstore-jet-vercel-app-shop-2025-11-06-18-14-25.png",
@@ -25,7 +29,7 @@
     "id": 2,
     "title": "DinisoftBD - Web Hosting Company Website",
     "desc": "A modern and responsive web hosting company website built with Next.js and Tailwind CSS.",
-    "img": "/images/project2.1.png",
+    "img": "https://i.ibb.co/CsbXmbNB/project1-1.png",
     "type": "nextjs",
     "technologies": ["Next.js", "Tailwind CSS", "Lucide Icons", "Swiper.js"],
     "liveUrl": "https://dinisoftbd.com/",
@@ -36,11 +40,11 @@
     "challenges": "Optimizing SEO and load time while maintaining a feature-rich homepage was a key challenge. I implemented Next.js Image Optimization and dynamic component imports to reduce initial load and improve user experience.",
     "results": "The final product achieved a fully responsive layout, under 1.1s average page load time, and excellent Lighthouse scores for performance and accessibility. Client satisfaction increased significantly due to improved usability and modern UI.",
     "images": [
-      "/images/dinisoft1.png",
-      "/images/dinisoft2.png",
-      "/images/dinisoft3.png",
-      "/images/dinisoft4.png",
-      "/images/dinisoft5.png"
+      "https://i.ibb.co/CsbXmbNB/project1-1.png",
+      "https://i.ibb.co/20NfkQKt/project1-2.png",
+      "https://i.ibb.co/KxdCKD98/project1-3.png",
+      "https://i.ibb.co/0xP0rVQ/project1-4.png",
+      "https://i.ibb.co/0xP0rVQ/project1-5.png"
     ]
   }
 ]

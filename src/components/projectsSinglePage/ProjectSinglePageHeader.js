@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-function ProjectSinglePageHeader({ project, isMobile }) {
+function ProjectSinglePageHeader({ project }) {
   return (
     <header className="container mx-auto px-3 sm:px-4 pb-6 lg:pb-8">
       <Link
@@ -49,10 +49,10 @@ function ProjectSinglePageHeader({ project, isMobile }) {
                 clipRule="evenodd"
               />
             </svg>
-            {isMobile ? "Demo" : "Live Demo"}
+            Live Demo
           </Link>
           <Link
-            href={project.githubUrl}
+            href={`https://github.com/${project.githubUrl}`}
             target="_blank"
             className="px-3 py-2 sm:px-4 sm:py-2 border border-gray-700 text-gray-300 rounded-md hover:border-sunsetOrange hover:text-sunsetOrange transition-colors flex items-center gap-2 text-sm sm:text-base whitespace-nowrap"
           >
@@ -68,7 +68,7 @@ function ProjectSinglePageHeader({ project, isMobile }) {
                 clipRule="evenodd"
               />
             </svg>
-            {isMobile ? "Code" : "View Code"}
+            View Code
           </Link>
         </div>
       </div>

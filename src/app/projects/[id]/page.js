@@ -11,15 +11,6 @@ function ProjectDetails() {
 
   const [project, setProject] = useState(null);
   const [activeImage, setActiveImage] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Detect screen size (for responsive behavior)
-  useEffect(() => {
-    const checkIsMobile = () => setIsMobile(window.innerWidth < 768);
-    checkIsMobile();
-    window.addEventListener("resize", checkIsMobile);
-    return () => window.removeEventListener("resize", checkIsMobile);
-  }, []);
 
   // Fetch project data from /data/projects.json
   useEffect(() => {
@@ -59,7 +50,7 @@ function ProjectDetails() {
   return (
     <section className="py-4 sm:py-8 lg:py-12 xl:py-16 2xl:py-20">
       {/* Header */}
-      <ProjectSinglePageHeader project={project} isMobile={isMobile} />
+      <ProjectSinglePageHeader project={project} />
 
       <section className="container mx-auto px-3 sm:px-4 flex flex-col lg:flex-row gap-6 lg:gap-8">
         {/* Left side - Main Content */}
