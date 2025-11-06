@@ -4,7 +4,7 @@ function ProjectSinglePageHeader({ project }) {
   return (
     <header className="container mx-auto px-3 sm:px-4 pb-6 lg:pb-8">
       <Link
-        href="/"
+        href="#projects"
         className="inline-flex items-center text-sunsetOrange hover:text-orange-300 transition-colors mb-4 lg:mb-6 text-sm sm:text-base"
       >
         <svg
