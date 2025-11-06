@@ -5,7 +5,13 @@
     "desc": "A next-generation gaming e-commerce platform built with Next.js and Tailwind CSS.",
     "img": "https://i.ibb.co/N6Qz9DKW/Screenshot-2025-11-06-181225.png",
     "type": "nextjs",
-    "technologies": ["Next.js", "Tailwind CSS", "Swiper.js", "React Icons"],
+    "technologies": [
+      "Next.js",
+      "Tailwind CSS",
+      "Swiper.js",
+      "React Icons",
+      "React FAST Marquee"
+    ],
     "liveUrl": "https://xstore-jet.vercel.app/",
     "githubUrl": "Adityo-dev/xstore",
     "completionDate": "Nov 2025",
@@ -23,7 +29,8 @@
       "https://i.ibb.co/Fb6Shbst/screencapture-xstore-jet-vercel-app-shop-2025-11-06-18-14-25.png",
       "https://i.ibb.co/gbmDdgCp/screencapture-xstore-jet-vercel-app-faqs-2025-11-06-18-14-34.png",
       "https://i.ibb.co/0VcJyYzS/screencapture-xstore-jet-vercel-app-contacts-2025-11-06-18-14-40.png"
-    ]
+    ],
+    "notes": ""
   },
   {
     "id": 2,
@@ -31,11 +38,17 @@
     "desc": "A modern and responsive web hosting company website built with Next.js and Tailwind CSS.",
     "img": "https://i.ibb.co/CsbXmbNB/project1-1.png",
     "type": "nextjs",
-    "technologies": ["Next.js", "Tailwind CSS", "Lucide Icons", "Swiper.js"],
+    "technologies": [
+      "Next.js",
+      "Tailwind CSS",
+      "Lucide Icons",
+      "Swiper.js",
+      "React FAST Marquee"
+    ],
     "liveUrl": "https://dinisoftbd.com/",
     "githubUrl": "Adityo-dev/dinisoftbd",
-    "completionDate": "January 2025",
-    "status": "Completed",
+    "completionDate": "Feb 16, 2025",
+    "status": "live",
     "longDescription": "DinisoftBD is a professional web hosting company website that provides a sleek and modern interface for users to explore hosting plans, domain registration, and digital services. The site is built using Next.js for fast rendering and SEO optimization, while Tailwind CSS ensures a clean and scalable design. Swiper.js adds dynamic carousel sections for testimonials and hosting packages, and Lucide Icons enhance the visual aesthetics with a minimal and modern icon set.",
     "challenges": "Optimizing SEO and load time while maintaining a feature-rich homepage was a key challenge. I implemented Next.js Image Optimization and dynamic component imports to reduce initial load and improve user experience.",
     "results": "The final product achieved a fully responsive layout, under 1.1s average page load time, and excellent Lighthouse scores for performance and accessibility. Client satisfaction increased significantly due to improved usability and modern UI.",
@@ -45,6 +58,39 @@
       "https://i.ibb.co/KxdCKD98/project1-3.png",
       "https://i.ibb.co/0xP0rVQ/project1-4.png",
       "https://i.ibb.co/0xP0rVQ/project1-5.png"
-    ]
+    ],
+    "notes": ""
+  },
+  {
+    "id": 3,
+    "title": "GadgetGallery - Practice Project",
+    "desc": "A small practice e-commerce project for gadgets built with React and Tailwind CSS.",
+    "img": "https://i.ibb.co/4nnFZph0/project2-1.png",
+    "type": "nextjs",
+    "technologies": [
+      "Next Js",
+      "Tailwind CSS",
+      "Swiper.js",
+      "React Icons",
+      "Headless UI",
+      "React FAST Marquee"
+    ],
+    "liveUrl": "https://gadgetgallery-eta.vercel.app/",
+    "githubUrl": "https://github.com/yourusername/gadgetgallery",
+    "completionDate": "Oct 31, 2024",
+    "status": "Practice",
+    "longDescription": "GadgetGallery is a practice project I built to sharpen my React and Tailwind skills. It features a simple product listing, image gallery, and a responsive design.",
+    "challenges": "This project was mainly for learning, so I focused on practicing React state management, component reusability, and styling with Tailwind CSS.",
+    "results": "The project helped me improve my component-based architecture and responsive design skills. Even though it has several bugs, it serves as a learning milestone.",
+    "images": [
+      "https://i.ibb.co/4nnFZph0/project2-1.png",
+      "https://i.ibb.co/bgqNVdq9/project2-2.png",
+      "https://i.ibb.co/XZSBSfpj/project2-3.png",
+      "https://i.ibb.co/YTbR7Tkb/project2-4.png",
+      "https://i.ibb.co/JgjRHRF/project2-5.png",
+      "https://i.ibb.co/bgHwXf3S/project2-6.png",
+      "https://i.ibb.co/DDZ4C2Ym/project2-8.png"
+    ],
+    "notes": "This project was created for practice purposes. It may contain bugs, incomplete features, or unoptimized code."
   }
 ]

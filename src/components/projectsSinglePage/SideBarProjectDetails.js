@@ -4,17 +4,25 @@ function SideBarProjectDetails({ project }) {
   return (
     <div className="bg-gray-900 rounded-lg p-4 sticky top-4">
       <h3 className="text-lg sm:text-xl font-bold mb-4">Project Details</h3>
+      {/* Show notes if available */}
+      {project?.notes && (
+        <div className="mb-3 p-2 bg-yellow-500/20 text-yellow-400 text-xs rounded">
+          ⚠️ {project.notes}
+        </div>
+      )}
 
       <div className="space-y-4">
         <div>
           <p className="text-gray-400 text-xs sm:text-sm">Status</p>
           <p
             className={`font-medium text-sm sm:text-base capitalize ${
-              project.status === "Completed"
-                ? "text-green-400"
-                : project.status === "Live"
-                ? "text-blue-400"
-                : "text-yellow-400"
+              project?.status?.toLowerCase() === "completed"
+                ? "text-green-500"
+                : project?.status?.toLowerCase() === "live"
+                ? "text-blue-500"
+                : project?.status?.toLowerCase() === "practice"
+                ? "text-red-500"
+                : "text-yellow-500"
             }`}
           >
             {project.status}
