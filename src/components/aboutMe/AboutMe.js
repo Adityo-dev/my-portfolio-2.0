@@ -35,8 +35,8 @@ function AboutMe() {
 
         {/* Buttons */}
         <Link
-          href={"/cv.pdf"}
-          download="aditto-cv.pdf"
+          href={"/cv/koushikBarmonCV.pdf"}
+          download="/cv/koushikBarmonCV.pdf"
           className="flex items-center space-x-1"
         >
           <button className="bg-white text-black font-semibold px-4 py-3 rounded-md text-sm uppercase">
