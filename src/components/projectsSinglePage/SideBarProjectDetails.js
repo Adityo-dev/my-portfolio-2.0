@@ -66,7 +66,7 @@ function SideBarProjectDetails({ project }) {
             target="_blank"
             className="flex items-center justify-between p-3 bg-gray-800 rounded-md hover:bg-gray-700 transition-colors group text-sm sm:text-base"
           >
-            <span>Live Website</span>
+            <span>{project.liveUrl ? "Live Website" : "Live Not Allow"}</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-4 w-4 group-hover:text-sunsetOrange"
@@ -85,7 +85,11 @@ function SideBarProjectDetails({ project }) {
             target="_blank"
             className="flex items-center justify-between p-3 bg-gray-800 rounded-md hover:bg-gray-700 transition-colors group text-sm sm:text-base"
           >
-            <span>GitHub Repository</span>
+            <span>
+              {project.githubUrl
+                ? "GitHub Repository"
+                : "GitHub Repository Not Allow"}
+            </span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-4 w-4 group-hover:text-sunsetOrange"

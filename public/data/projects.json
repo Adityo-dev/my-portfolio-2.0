@@ -76,7 +76,7 @@
       "React FAST Marquee"
     ],
     "liveUrl": "https://gadgetgallery-eta.vercel.app/",
-    "githubUrl": "https://github.com/yourusername/gadgetgallery",
+    "githubUrl": "Adityo-dev/Gadget-gallery",
     "completionDate": "Oct 31, 2024",
     "status": "Practice",
     "longDescription": "GadgetGallery is a practice project I built to sharpen my React and Tailwind skills. It features a simple product listing, image gallery, and a responsive design.",
@@ -92,5 +92,69 @@
       "https://i.ibb.co/DDZ4C2Ym/project2-8.png"
     ],
     "notes": "This project was created for practice purposes. It may contain bugs, incomplete features, or unoptimized code."
+  },
+  {
+    "id": 4,
+    "title": "MedServiceBD - Online Pharmacy",
+    "desc": "An e-commerce platform for buying medicines online, built with Next.js and Tailwind CSS.",
+    "img": "https://i.ibb.co/0Rs9cxtb/product1-1.png",
+    "type": "nextjs",
+    "technologies": [
+      "Next Js",
+      "Tailwind CSS",
+      "Lucide Icons",
+      "Swiper.js",
+      "React Hook Form"
+    ],
+    "liveUrl": "https://www.memservicebd.com/",
+    "githubUrl": "YourGithubUsername/MedServiceBD",
+    "completionDate": "Nov 5, 2025",
+    "status": "Live",
+    "longDescription": "MedServiceBD is an online pharmacy platform where users can browse and purchase medicines, health supplements, and personal care products. The project emphasizes responsive design, smooth user experience, and easy navigation.",
+    "challenges": "Integrating a real-time product search, handling multiple product categories, and implementing responsive design for mobile and desktop views were the main challenges.",
+    "results": "This project improved my skills in building e-commerce layouts, managing complex component structures, and ensuring cross-device compatibility. The live site is fully functional with a secure checkout workflow.",
+    "images": [
+      "https://i.ibb.co/0Rs9cxtb/product1-1.png",
+      "https://i.ibb.co/tTwVZY67/product1-5.png",
+      "https://i.ibb.co/GQvc1d5Y/product1-6.png",
+      "https://i.ibb.co/4RfCJ1P3/product1-2.png",
+      "https://i.ibb.co/SDJZmZJt/product1-4.png",
+      "https://i.ibb.co/Fbmvdq51/product1-3.png"
+    ],
+    "notes": ""
+  },
+  {
+    "id": 5,
+    "title": "Fikiara - Online Learning Platform",
+    "desc": "An education-focused web application designed to provide online courses and learning resources for students.",
+    "img": "https://i.ibb.co/PzwQSgH1/product1-7.png",
+    "type": "nextjs",
+    "technologies": [
+      "Next Js",
+      "Tailwind CSS",
+      "Framer Motion",
+      "React Icons",
+      "Swiper.js",
+      "Shadcn UI"
+    ],
+    "liveUrl": "https://fikiara-mauve.vercel.app/",
+    "githubUrl": "",
+    "completionDate": "Ongoing",
+    "status": "Work in Progress",
+    "longDescription": "Fikiara is an online education platform designed to make learning interactive and visually engaging. It features course previews, category filtering, instructor profiles, and responsive layouts optimized for all devices.",
+    "challenges": "The primary challenge is structuring reusable components for course cards, managing dynamic routing for course details, and ensuring a smooth UI/UX for all users.",
+    "results": "Currently under active development. The project aims to become a full-featured education hub where students can browse, enroll, and learn from structured online courses.",
+    "images": [
+      "https://i.ibb.co/6JLXSRSB/product1-11.png",
+      "https://i.ibb.co/7JMVchcD/product1-10.png",
+      "https://i.ibb.co/TqxpKKSW/product1-8.png",
+      "https://i.ibb.co/gZs765k6/product1-9.png",
+      "https://i.ibb.co/PzwQSgH1/product1-7.png",
+      "https://i.ibb.co/TM3XWHdX/product1-6.png",
+      "https://i.ibb.co/RTLTSwpL/product1-5.png",
+      "https://i.ibb.co/twQ26fz2/product1-4.png",
+      "https://i.ibb.co/FqXKSpvd/product1-3.png",
+      "https://i.ibb.co/1GJZPLhx/product1-2.png"
+    ]
   }
 ]
