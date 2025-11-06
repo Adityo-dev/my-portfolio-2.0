@@ -1,5 +1,5 @@
 "use client";
-import { allProjectsData } from "@/app/data/allProjects";
+
 import ProjectSinglePageHeader from "@/components/projectsSinglePage/ProjectSinglePageHeader";
 import SideBarProjectDetails from "@/components/projectsSinglePage/SideBarProjectDetails";
 import Image from "next/image";
@@ -8,36 +8,41 @@ import { useEffect, useState } from "react";
 
 function ProjectDetails() {
   const params = useParams();
+
   const [project, setProject] = useState(null);
   const [activeImage, setActiveImage] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
+  // Detect screen size (for responsive behavior)
   useEffect(() => {
-    // Check if window is available (client-side)
-    if (typeof window !== "undefined") {
-      const checkIsMobile = () => {
-        setIsMobile(window.innerWidth < 768);
-      };
-
-      // Initial check
-      checkIsMobile();
-
-      // Add event listener for window resize
-      window.addEventListener("resize", checkIsMobile);
-
-      // Cleanup
-      return () => window.removeEventListener("resize", checkIsMobile);
-    }
+    const checkIsMobile = () => setIsMobile(window.innerWidth < 768);
+    checkIsMobile();
+    window.addEventListener("resize", checkIsMobile);
+    return () => window.removeEventListener("resize", checkIsMobile);
   }, []);
 
+  // Fetch project data from /data/projects.json
   useEffect(() => {
-    if (params?.id) {
-      const projectId = parseInt(params?.id, 10);
-      const foundProject = allProjectsData.find((p) => p.id === projectId);
-      if (foundProject) {
-        setProject(foundProject);
+    const fetchProject = async () => {
+      try {
+        const res = await fetch("/data/projects.json");
+        if (!res.ok) throw new Error("Failed to load project data");
+        const data = await res.json();
+
+        const projectId = parseInt(params?.id, 10);
+        const foundProject = data.find((p) => p.id === projectId);
+
+        if (foundProject) {
+          setProject(foundProject);
+        } else {
+          console.warn("Project not found:", projectId);
+        }
+      } catch (error) {
+        console.error("Error fetching project:", error);
       }
-    }
+    };
+
+    if (params?.id) fetchProject();
   }, [params]);
 
   if (!project) {
@@ -57,6 +62,7 @@ function ProjectDetails() {
       <ProjectSinglePageHeader project={project} isMobile={isMobile} />
 
       <section className="container mx-auto px-3 sm:px-4 flex flex-col lg:flex-row gap-6 lg:gap-8">
+        {/* Left side - Main Content */}
         <div className="lg:w-[70%]">
           {/* Hero Image */}
           <div className="rounded-lg overflow-hidden mb-6 lg:mb-8 xl:mb-10 shadow-sm">
@@ -95,7 +101,7 @@ function ProjectDetails() {
             )}
           </div>
 
-          {/* Main Content */}
+          {/* Main Project Description */}
           <div>
             <section className="mb-6">
               <h2 className="text-xl sm:text-2xl font-bold mb-3 text-sunsetOrange">
@@ -126,6 +132,7 @@ function ProjectDetails() {
           </div>
         </div>
 
+        {/* Right side - Sidebar Details */}
         <div className="lg:w-[30%] lg:min-w-[300px]">
           <SideBarProjectDetails project={project} />
         </div>

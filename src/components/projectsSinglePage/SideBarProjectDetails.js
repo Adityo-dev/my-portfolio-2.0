@@ -9,7 +9,7 @@ function SideBarProjectDetails({ project }) {
         <div>
           <p className="text-gray-400 text-xs sm:text-sm">Status</p>
           <p
-            className={`font-medium text-sm sm:text-base ${
+            className={`font-medium text-sm sm:text-base capitalize ${
               project.status === "Completed"
                 ? "text-green-400"
                 : project.status === "Live"
@@ -73,7 +73,7 @@ function SideBarProjectDetails({ project }) {
             </svg>
           </Link>
           <Link
-            href={project.githubUrl}
+            href={`https://github.com/${project.githubUrl}`}
             target="_blank"
             className="flex items-center justify-between p-3 bg-gray-800 rounded-md hover:bg-gray-700 transition-colors group text-sm sm:text-base"
           >

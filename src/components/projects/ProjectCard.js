@@ -15,7 +15,7 @@ function ProjectCard({ project }) {
         {/* Status Badge */}
         <div className="absolute top-3 right-3">
           <span
-            className={`px-3 py-1 rounded-full text-xs font-medium ${
+            className={`px-3 py-1 rounded-full text-xs font-medium capitalize ${
               project?.status === "Completed"
                 ? "bg-green-500/20 text-green-400"
                 : project?.status === "Live"
@@ -74,7 +74,7 @@ function ProjectCard({ project }) {
               </svg>
             </Link>
             <Link
-              href={project?.githubUrl}
+              href={`https://github.com/${project.githubUrl}`}
               target="_blank"
               className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
             >
