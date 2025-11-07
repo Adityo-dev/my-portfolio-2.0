@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import HeaderRowSection from "../sectionHeader/HeaderRowSection";
+import SectionHeader from "../SectionHeader";
 import ProjectCard from "./ProjectCard";
 
 function FeatureWork() {
@@ -42,7 +42,7 @@ function FeatureWork() {
       className="container mx-auto px-4 py-8 sm:py-12 lg:py-24"
     >
       {/* Section Header */}
-      <HeaderRowSection
+      <SectionHeader
         sectionName={"FEATURED WORK"}
         title={"Latest Projects"}
         description={

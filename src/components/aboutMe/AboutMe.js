@@ -1,7 +1,7 @@
 import { aboutSectionData } from "@/app/data/aboutSectionData";
 import Image from "next/image";
 import Link from "next/link";
-import HeaderRowSection from "../sectionHeader/HeaderRowSection";
+import SectionHeader from "../SectionHeader";
 
 function AboutMe() {
   return (
@@ -11,7 +11,7 @@ function AboutMe() {
     >
       <div className="xl:w-1/2">
         {/* Section Header */}
-        <HeaderRowSection
+        <SectionHeader
           sectionName={aboutSectionData?.sectionName}
           title={aboutSectionData?.title}
           description={aboutSectionData?.description}

@@ -1,7 +1,7 @@
 "use client";
 import { servicesSectionData } from "@/app/data/servicesSectionData";
 import { useState } from "react";
-import HeaderColSection from "../sectionHeader/HeaderColSection";
+import SectionHeader from "../SectionHeader";
 import ServicesCard from "./ServicesCard";
 
 function Services() {
@@ -11,10 +11,11 @@ function Services() {
     <section id="services" className="py-8 sm:py-12 lg:py-24">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <HeaderColSection
+        <SectionHeader
           sectionName={servicesSectionData?.sectionName}
           title={servicesSectionData?.title}
           description={servicesSectionData?.description}
+          isCenter={true}
         />
 
         {/* Services Grid */}

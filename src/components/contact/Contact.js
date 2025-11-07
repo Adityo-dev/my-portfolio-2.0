@@ -1,6 +1,6 @@
 import { contactSectionData } from "@/app/data/contactSectionData";
 import Link from "next/link";
-import HeaderRowSection from "../sectionHeader/HeaderRowSection";
+import SectionHeader from "../SectionHeader";
 import ContactFrom from "./ContactFrom";
 
 function ContactSection() {
@@ -9,7 +9,7 @@ function ContactSection() {
       <div className="container mx-auto px-4 h-full flex flex-col lg:flex-row justify-between gap-8">
         <div>
           {/* Section Header */}
-          <HeaderRowSection
+          <SectionHeader
             sectionName={contactSectionData?.sectionName}
             title={contactSectionData?.title}
             description={contactSectionData?.description}

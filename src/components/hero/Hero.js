@@ -1,20 +1,14 @@
 import { heroSectionData } from "@/app/data/heroSectionData";
+
 import Link from "next/link";
+import DeveloperRoles from "./DeveloperRoles";
 
 function Hero() {
   return (
     <section className="w-full flex flex-col justify-center py-8 sm:py-12 lg:py-24">
       <div className="container mx-auto px-4 sm:px-6 w-full flex flex-col justify-center space-y-16 md:space-y-44">
         {/* Roles Section - Stack on mobile, row on larger screens */}
-        <div className="w-full flex flex-wrap items-center justify-center sm:justify-between uppercase text-sm gap-4 md:gap-0">
-          {heroSectionData?.developerRoles.map((role, ind) => (
-            <p key={ind} className="space-x-2 text-center md:text-left">
-              <span className="text-sunsetOrange">{"{"}</span>
-              <span>{role}</span>
-              <span className="text-sunsetOrange">{"}"}</span>
-            </p>
-          ))}
-        </div>
+        <DeveloperRoles developerRoles={heroSectionData?.developerRoles} />
 
         {/* Main Content - Stack on mobile, row on larger screens */}
         <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-8 lg:gap-16 xl:gap-32">
@@ -38,7 +32,7 @@ function Hero() {
               <button className="bg-white text-black font-semibold px-4 py-3 rounded-md text-sm uppercase flex-1 sm:flex-none">
                 {heroSectionData?.ctaBtn?.name}
               </button>
-              <button className="bg-sunsetOrange text-white font-semibold px-4 py-3 rounded-md flex items-center justify-center w-12 h-12">
+              <button className="bg-sunsetOrange text-white font-semibold px-4 py-3 rounded-md flex items-center justify-center w-12 h-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -59,18 +53,6 @@ function Hero() {
           </div>
         </div>
       </div>
-
-      {/* If you want to add the image back later, use this responsive approach:
-      <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-1/2 max-w-2xl hidden xl:block">
-        <Image
-          src={"/images/heroImage.jpg"}
-          width={800}
-          height={800}
-          alt="Hero image"
-          className="w-full h-auto"
-        />
-      </div>
-      */}
     </section>
   );
 }

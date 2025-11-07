@@ -1,7 +1,7 @@
 "use client";
 import { skillsSectionData } from "@/app/data/skillsSectionData";
 import { useState } from "react";
-import HeaderColSection from "../sectionHeader/HeaderColSection";
+import SectionHeader from "../SectionHeader";
 import SkillsCard from "./SkillsCard";
 import SkillsSummary from "./SkillsSummary";
 
@@ -12,10 +12,11 @@ function Skills() {
     <section id="skills" className="py-8 sm:py-12 lg:py-24">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <HeaderColSection
+        <SectionHeader
           sectionName={skillsSectionData?.sectionName}
           title={skillsSectionData?.title}
           description={skillsSectionData?.description}
+          isCenter={true}
         />
 
         {/* Skills Grid */}
