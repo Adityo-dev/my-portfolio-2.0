@@ -1,5 +1,6 @@
 "use client";
 
+import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 import SectionHeader from "../SectionHeader";
 import ProjectCard from "./ProjectCard";
@@ -68,11 +69,20 @@ function FeatureWork() {
       </div>
 
       {/* Project Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-10">
-        {filteredProjects.map((project) => (
-          <ProjectCard project={project} key={project.id} />
-        ))}
-      </div>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={activeTab}
+          initial={{ y: 10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: -10, opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-10"
+        >
+          {filteredProjects.map((project) => (
+            <ProjectCard project={project} key={project.id} />
+          ))}
+        </motion.div>
+      </AnimatePresence>
 
       {/* No Projects Message */}
       {filteredProjects.length === 0 && (
