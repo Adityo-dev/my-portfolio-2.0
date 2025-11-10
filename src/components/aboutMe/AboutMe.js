@@ -1,7 +1,8 @@
 import { aboutSectionData } from "@/app/data/aboutSectionData";
-import Image from "next/image";
+
 import Link from "next/link";
 import SectionHeader from "../SectionHeader";
+import AboutImage from "./AboutImage";
 
 function AboutMe() {
   return (
@@ -63,14 +64,8 @@ function AboutMe() {
       </div>
 
       {/* Right Side - Content */}
-      <div className="xl:w-1/2">
-        <Image
-          src={aboutSectionData?.image?.url}
-          alt={aboutSectionData?.image?.alt}
-          width={400}
-          height={400}
-          className="w-full h-full object-cover"
-        />
+      <div className="xl:w-1/2 hidden lg:block">
+        <AboutImage />
       </div>
     </section>
   );

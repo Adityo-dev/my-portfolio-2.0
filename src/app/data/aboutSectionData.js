@@ -37,12 +37,6 @@ const aboutSectionData = {
     name: "download cv",
     url: "#",
   },
-
-  //About Image
-  image: {
-    url: "/images/image3.avif",
-    alt: "",
-  },
 };
 
 export { aboutSectionData };
