@@ -13,7 +13,7 @@ const aboutSectionData = {
         icon: "🎓",
         title: "Diploma in Computer Science & Technology (Ongoing)",
         institute: "Kushtia Polytechnic Institute",
-        duration: "2021–2026",
+        duration: "Ongoing",
       },
       {
         id: 2,
