@@ -10,7 +10,7 @@ const skillsSectionData = {
       level: 95,
       description:
         "Crafting semantic, accessible, and responsive layouts using HTML5 and modern CSS techniques including Flexbox and Grid.",
-      projects: "40+ projects",
+      projects: "30+ projects",
       icon: "🎨",
     },
     {
@@ -18,7 +18,7 @@ const skillsSectionData = {
       name: "Tailwind CSS",
       level: 90,
       description:
-        "Building fast, custom, and mobile-friendly UI designs with utility-first Tailwind CSS framework.",
+        "Designing fast, consistent, and mobile-friendly UI using Tailwind CSS utility classes for modern responsive web apps.",
       projects: "20+ projects",
       icon: "💨",
     },
@@ -27,8 +27,8 @@ const skillsSectionData = {
       name: "JavaScript",
       level: 95,
       description:
-        "Writing clean, modular, and modern JavaScript (ES6+) with DOM manipulation, asynchronous programming, and event-driven patterns.",
-      projects: "30+ projects",
+        "Writing clean, modular, and efficient JavaScript (ES6+) with asynchronous handling, API integration, and DOM manipulation.",
+      projects: "25+ projects",
       icon: "📜",
     },
     {
@@ -36,8 +36,8 @@ const skillsSectionData = {
       name: "React",
       level: 90,
       description:
-        "Developing dynamic, component-based user interfaces using React with Hooks, Context API, and modern best practices.",
-      projects: "15+ projects",
+        "Building dynamic and interactive UI components using React, with Hooks, Context API, and component-based architecture.",
+      projects: "10+ projects",
       icon: "⚛️",
     },
     {
@@ -45,18 +45,18 @@ const skillsSectionData = {
       name: "Next.js",
       level: 85,
       description:
-        "Implementing server-side rendering, static site generation, and API routes to build performant React-based applications.",
-      projects: "10+ projects",
+        "Creating SEO-friendly, fast, and scalable React applications using Next.js with SSR, SSG, and API routes.",
+      projects: "18+ projects",
       icon: "▲",
     },
     {
       id: 6,
-      name: "TypeScript",
+      name: "Git & GitHub",
       level: 80,
       description:
-        "Ensuring type safety and maintainable code through TypeScript with interfaces, generics, and gradual adoption in projects.",
-      projects: "8+ projects",
-      icon: "🔷",
+        "Version controlling projects efficiently using Git and GitHub — managing branches, commits, and collaborative workflows.",
+      projects: "50+ repositories",
+      icon: "🌿",
     },
   ],
 
