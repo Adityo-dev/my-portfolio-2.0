@@ -48,7 +48,9 @@ function ProjectCard({ project }) {
           </span>
         </div>
 
-        <p className="text-gray-300 mb-4 flex-1">{project?.desc}</p>
+        <p className="text-gray-300 mb-4 flex-1 line-clamp-2">
+          {project?.desc}
+        </p>
 
         {/* Technologies Used */}
         <div className="flex flex-wrap gap-2 mb-5">

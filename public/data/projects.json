@@ -156,5 +156,72 @@
       "https://i.ibb.co/FqXKSpvd/product1-3.png",
       "https://i.ibb.co/1GJZPLhx/product1-2.png"
     ]
+  },
+  {
+    "id": 6,
+    "title": "Posh n Trendy - Clothing E-Commerce Website",
+    "desc": "A modern clothing e-commerce platform designed to showcase trendy fashion collections with a clean and elegant user interface.",
+    "img": "https://i.ibb.co/ZzFysvsk/Screenshot-2025-11-13-021838.png",
+    "type": "nextjs",
+    "technologies": [
+      "Next Js",
+      "Tailwind CSS",
+      "Framer Motion",
+      "React Icons",
+      "Swiper.js",
+      "Shadcn UI"
+    ],
+    "liveUrl": "https://poshntrendy.vercel.app/",
+    "githubUrl": "",
+    "completionDate": "Ongoing",
+    "status": "Work in Progress",
+    "longDescription": "Posh n Trendy is an ongoing clothing e-commerce project built to deliver a stylish and engaging shopping experience. It aims to feature product filtering, cart management, and a responsive layout with smooth animations optimized for all devices.",
+    "challenges": "Currently working on making the layout fully responsive, building reusable product components, and implementing cart functionality for seamless shopping interactions.",
+    "results": "Still under development. The project will soon include responsive design, product filtering, and enhanced animations for a better shopping experience.",
+    "images": [
+      "https://i.ibb.co/MkKVDsJq/Screenshot-2025-11-13-021240.png",
+      "https://i.ibb.co/pBKrW20h/Screenshot-2025-11-13-021053.png",
+      "https://i.ibb.co/zVWxHGBZ/Screenshot-2025-11-13-021042.png",
+      "https://i.ibb.co/fYkCXNpn/Screenshot-2025-11-13-021246.png",
+      "https://i.ibb.co/5xvGNhnX/Screenshot-2025-11-13-021306.png"
+    ],
+    "notes": "This project was created for practice purposes. It may contain bugs, incomplete features, or unoptimized code."
+  },
+  {
+    "id": 7,
+    "title": "DineOut - Food Ordering Web App",
+    "desc": "A React-based online food ordering platform where users can browse restaurants, view menus, and place orders seamlessly.",
+    "img": "https://i.ibb.co/V0CjjDML/Screenshot-2025-11-13-025046.png",
+    "type": "react",
+    "technologies": ["React Js", "Tailwind CSS", "React Icons"],
+    "liveUrl": "https://assignment-2-theta-teal.vercel.app/",
+    "githubUrl": "https://github.com/Adityo-dev/assignment-2",
+    "completionDate": "2025",
+    "status": "Completed",
+    "longDescription": "DineOut is a modern web application designed to simplify the online food ordering process. Users can explore different restaurants, view menu items, and create custom orders with accurate order tracking. The app ensures fast navigation, responsive design, and smooth animations for an enjoyable user experience.",
+    "challenges": "The main challenges included managing complex order states, ensuring accurate order fulfillment, and optimizing API calls for performance while maintaining responsive layouts across devices.",
+    "results": "Successfully built a responsive and fully functional food ordering system that allows users to create, view, and track orders in real-time. Improved user satisfaction by simplifying the ordering process.",
+    "images": ["https://i.ibb.co/V0CjjDML/Screenshot-2025-11-13-025046.png"],
+    "notes": ""
+  },
+  {
+    "id": 8,
+    "title": "Building Digital Products & Brands",
+    "desc": "A sleek and modern landing page designed to highlight a digital agency’s expertise in crafting world-class products and brands.",
+    "img": "https://i.ibb.co/q3sqzGL7/Screenshot-2025-11-13-025810.png",
+    "type": "react",
+    "technologies": ["React Js", "Tailwind CSS", "React Icons"],
+    "liveUrl": "https://assignment-1-mu-ten.vercel.app/",
+    "githubUrl": "https://github.com/Adityo-dev/assignment-1",
+    "completionDate": "2025",
+    "status": "Completed",
+    "longDescription": "This project is a clean, responsive landing page that showcases a digital agency specializing in building products and brands. It emphasizes design clarity, visual hierarchy, and smooth animations to attract and engage visitors while maintaining a professional layout.",
+    "challenges": "The primary challenges included designing a layout that balances aesthetics and performance, ensuring mobile responsiveness, and maintaining consistent animation flow across sections.",
+    "results": "Delivered a polished, responsive, and visually engaging landing page optimized for performance. The design effectively communicates the agency’s mission and strengthens its brand identity.",
+    "images": [
+      "https://i.ibb.co/hxPL3Tf7/screencapture-assignment-1-mu-ten-vercel-app-2025-11-13-02-58-14.png",
+      "https://i.ibb.co/q3sqzGL7/Screenshot-2025-11-13-025810.png"
+    ],
+    "notes": ""
   }
 ]

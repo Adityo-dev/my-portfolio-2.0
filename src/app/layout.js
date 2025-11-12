@@ -15,8 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Aditya Dev Barmon | Web developer",
-  description: "Aditya Dev Barmon is a web developer based in Bangladesh.",
+  title: "Koushik Barmon | Frontend Web Developer & Designer",
+  description:
+    "Koushik Barmon is a passionate Frontend Web Developer skilled in React, Next.js, and modern UI design. Crafting fast, responsive, and visually engaging web experiences with clean code and creative precision.",
 };
 
 export default function RootLayout({ children }) {
